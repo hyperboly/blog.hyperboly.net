@@ -1,0 +1,32 @@
+baseURL: "https://tech.hyperboly.net/"
+languageCode: en-us
+title: Tech Site
+theme: PaperMod
+paginate: 5
+
+params:
+  title: "Tech Site"
+  description: "My Technology Website"
+  defaultTheme: dark
+  disableThemeToggle: true
+
+  homeInfoParams:
+    Title: "My Tech Site"
+    Content: "This is my tech site that people can contribute to through Github."
+
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/hyperboly/techsite"
+    - name: "rss"
+      url: "http://localhost:1313/index.xml"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Teches on Tech Site</title>
+    <link>https://tech.hyperboly.net/tech/</link>
+    <description>Recent content in Teches on Tech Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jun 2022 18:09:07 +0800</lastBuildDate><atom:link href="https://tech.hyperboly.net/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPU passthrough for RX6600XT</title>
+      <link>https://tech.hyperboly.net/tech/gpupassthroughamd6600/</link>
+      <pubDate>Tue, 07 Jun 2022 18:09:07 +0800</pubDate>
+      
+      <guid>https://tech.hyperboly.net/tech/gpupassthroughamd6600/</guid>
+      <description>A Comprehensive Guide on GPU Passthroughs in Proxmox Some Prerequisites and Notes This method of passing through my GPU works for:
+Kernel: 5.15.30 Proxmox Version 7.2 TUF Gaming X570 Plus Motherboard Dual Radeon RX6600XT Asus GPU Ryzen 7 5800X CPU In the BIOs for your host computer (where Proxmox is installed) settings, these options should be modified:
+Secure boot: Off CPU Settings: SUM: On PSS: On PCI Subsystem Settings: Above 4G Encoding: On SR-IOV Support: On AMD CBS: IOMMU: On The Passthrough Process This is the part of the process where everything is either done in an ssh session, on the host computer&amp;rsquo;s shell, or the webGUI for proxmox.</description>
+    </item>
+    
+  </channel>
+</rss>

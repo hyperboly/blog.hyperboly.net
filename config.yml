@@ -1,24 +1,32 @@
-baseURL: "https://tech.hyperboly.net/"
+baseURL: "https://blog.hyperboly.net/"
 languageCode: en-us
-title: Tech Site
+title: HyperBlog
 theme: PaperMod
 paginate: 5
 
 params:
-  title: "Tech Site"
-  description: "My Technology Website"
+  title: "HyperBlog"
+  description: "My blog because I'm a super loner"
   defaultTheme: dark
   disableThemeToggle: true
 
   homeInfoParams:
-    Title: "My Tech Site"
-    Content: "This is my tech site that people can contribute to through Github."
+    Title: "HyperBlog"
+    Content: "This is my blog for technologies, rants, and stuff."
 
   socialIcons:
     - name: "github"
       url: "https://github.com/hyperboly/techsite"
     - name: "rss"
-      url: "http://localhost:1313/index.xml"
+      url: "https://blog.hyperboly.net/index.xml"
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
 
 markup:
   goldmark:
@@ -30,3 +38,12 @@ outputs:
     - HTML
     - RSS
     - JSON
+
+menu:
+  main:
+    - name: About
+      url: /about
+    - name: Tags
+      url: tags/
+    - name: Search
+      url: /search

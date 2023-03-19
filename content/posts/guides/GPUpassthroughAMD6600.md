@@ -38,13 +38,13 @@ First make sure your Proxmox is updated with the correct repos. You can follow t
 
 Next, you want to get your favorite text editor (Nano is preinstalled but I will use vim)
 
-> ``$ apt-get install vim``
+> ``# apt-get install vim``
 
 ### GRUB/Systemd Edits
 
 For Systemd, every step will be the same, the only difference is you will edit `/etc/kernel/cmdline` for the GRUB flags, all flags will be the same.
 
-``$ vim /etc/default/grub`` to get edit a file. I assume you have background knowledge already in a terminal, if not, refer to vim(1) or nano(1).
+``# vim /etc/default/grub`` to get edit a file. I assume you have background knowledge already in a terminal, if not, refer to vim(1) or nano(1).
 
 Find the line ``GRUB_CMDLINE_LINUX_DEFAULT = "quiet"`` and add these flags within the quotation marks:
 > ``iommu=pt amd_iommu=on video=efifb:off video=vesafb:off textonly video=simplefb:off nofb``

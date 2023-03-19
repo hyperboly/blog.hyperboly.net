@@ -27,6 +27,3 @@ What you'll notice with pwn is that there is a million different tools that achi
 [Ghidra](https://ghidra-sre.org/) is a tool developed by the NSA for disassembling and turning binaries into C. It is written in Java so I only run it in a VM, because any Java software is bloat for your system. The tool gives you a UI unlike the other 3 tools above, disassembles the code like with GDB, and tries to recreate the binary in C. This can give you a lot more insight into what the code is doing, which helps a lot in CTFs.
 ### pwn
 [pwn](https://docs.pwntools.com/en/stable/) is a pretty sweet python library that helps a LOT in solving CTFs and automating your solutions. The problem is that I'm a terrible programmer and can only program in BASH. It includes stuff like `remote` which allows you to attack remote services with python, it's pretty cool.
-
-## Basics on Memory:
-When starting on pwn, there are 1 level of memory that's important. The stack. Think of memory as a building, each floor is a storage space, and a building only has so many floors. Each floor and groups of floors can have a different purpose, the basement is for parking, floor 1 is for the lobby, floor 2 is for a restaurant, and the rest are residential.

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CTFs on HyperBlog</title>
+    <link>https://blog.hyperboly.net/tags/ctfs/</link>
+    <description>Recent content in CTFs on HyperBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Mar 2023 20:08:56 +0800</lastBuildDate><atom:link href="https://blog.hyperboly.net/tags/ctfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memory Basics</title>
+      <link>https://blog.hyperboly.net/posts/notes/memory-basics/</link>
+      <pubDate>Sun, 19 Mar 2023 20:08:56 +0800</pubDate>
+      
+      <guid>https://blog.hyperboly.net/posts/notes/memory-basics/</guid>
+      <description>Memory is essential to understand for pwning in CTFs. Here, I will try to explain the structure of memory and behaviors for beginners in pwn.
+Definition of Memory First, a basic definition of memory. Have you ever seen that long card in your computer with black squares on it? That&amp;rsquo;s memory. Most people (who watch Linus Tech Tips) know this as Random Access Memory (RAM), but at the core it is just temporary storage on your computer.</description>
+    </item>
+    
+    <item>
+      <title>Starting Pwn</title>
+      <link>https://blog.hyperboly.net/posts/notes/starting-pwn/</link>
+      <pubDate>Sun, 19 Mar 2023 19:05:02 +0800</pubDate>
+      
+      <guid>https://blog.hyperboly.net/posts/notes/starting-pwn/</guid>
+      <description>Pwn as a CTF category has always interested me because of the low level understanding it requires to be good at it. Turns out I&amp;rsquo;m terrible at it, so here are my notes to try and organize what I&amp;rsquo;ve learned. The pico primer really helped me with this. CryptoCat&amp;rsquo;s tutorial is also great for learning.
+Definitions: Abstraction I find that many people trying to get into computers get confused with abstraction as I did before, so I&amp;rsquo;ll try to explain it in simple terms.</description>
+    </item>
+    
+  </channel>
+</rss>

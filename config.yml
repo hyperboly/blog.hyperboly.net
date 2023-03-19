@@ -15,10 +15,12 @@ params:
     Content: "This is my blog for technologies, rants, and stuff."
 
   socialIcons:
+    - name: "email"
+      url: "mailto:johnwuonmail@gmail.com"
     - name: "github"
       url: "https://github.com/hyperboly/techsite"
     - name: "rss"
-      url: "https://blog.hyperboly.net/index.xml"
+      url: "/index.xml"
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true

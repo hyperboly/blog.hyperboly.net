@@ -6,16 +6,7 @@
     <description>Recent content in guides on HyperBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Mar 2023 19:26:15 +0800</lastBuildDate><atom:link href="https://blog.hyperboly.net/tags/guides/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>LACP on OPNsense</title>
-      <link>https://blog.hyperboly.net/posts/guides/lacp-on-opnsense/</link>
-      <pubDate>Sun, 19 Mar 2023 19:26:15 +0800</pubDate>
-      
-      <guid>https://blog.hyperboly.net/posts/guides/lacp-on-opnsense/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Tue, 07 Jun 2022 18:09:07 +0800</lastBuildDate><atom:link href="https://blog.hyperboly.net/tags/guides/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GPU passthrough for RX6600XT</title>
       <link>https://blog.hyperboly.net/posts/guides/gpupassthroughamd6600/</link>

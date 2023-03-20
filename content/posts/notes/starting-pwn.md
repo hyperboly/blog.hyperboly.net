@@ -4,6 +4,7 @@ title: "Starting Pwn"
 date: 2023-03-19T19:05:02+08:00
 author: John Wu
 ShowToc: true
+summary: "An introduction to the pwn (binary exploit) category for CTFs"
 tags: ['tech','CTFs']
 
 ---

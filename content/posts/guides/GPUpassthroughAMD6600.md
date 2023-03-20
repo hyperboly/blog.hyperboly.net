@@ -4,11 +4,12 @@ title: "GPU passthrough for RX6600XT"
 date: 2022-06-07T18:09:07+08:00
 author: John Wu
 ShowToc: true
+summary: "A Comprehensive Guide on GPU Passthroughs in Proxmox for the RX6600XT GPU"
 tags: ['tech', 'guides']
 
 ---
 
-# A Comprehensive Guide on GPU Passthroughs in Proxmox
+## A Comprehensive Guide on GPU Passthroughs in Proxmox For the RX6600XT GPU
 
 ## Some Prerequisites and Notes
 

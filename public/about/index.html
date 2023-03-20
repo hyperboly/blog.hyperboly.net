@@ -9,16 +9,15 @@
 <meta name="keywords" content="">
 <meta name="description" content="This blog is just for me to rant and take notes for random stuff I&rsquo;m doing. Currently, I play CTFs, selfhost servers, and play table tennis. This blog itself is selfhosted with hugo. An unfiltered look into the demented mind of a nerd.
 DISCLAIMER: Anything I write as fact should not be taken as fact, it is just the understanding of low GPA highschool student. For example, &ldquo;The Linux kernel has a scheduler for CPU tasks.">
-<meta name="author" content="">
+<meta name="author" content="John Wu">
 <link rel="canonical" href="https://blog.hyperboly.net/about/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d7fb4cbf980fe688a21621b06a795933c4e6bb2d4070ec940667af1715d84af2.css" integrity="sha256-1/tMv5gP5oiiFiGwanlZM8Tmuy1AcOyUBmevFxXYSvI=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://blog.hyperboly.net/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://blog.hyperboly.net/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://blog.hyperboly.net/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://blog.hyperboly.net/apple-touch-icon.png">
-<link rel="mask-icon" href="https://blog.hyperboly.net/safari-pinned-tab.svg">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://blog.hyperboly.net/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.hyperboly.net/assets/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.hyperboly.net/assets/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.hyperboly.net/assets/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.hyperboly.net/assets/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -72,6 +71,10 @@ DISCLAIMER: Anything I write as fact should not be taken as fact, it is just the
   "inLanguage": "en",
   "datePublished": "2023-03-19T17:46:17+08:00",
   "dateModified": "2023-03-19T17:46:17+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "John Wu"
+  },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://blog.hyperboly.net/about/"
@@ -81,7 +84,7 @@ DISCLAIMER: Anything I write as fact should not be taken as fact, it is just the
     "name": "HyperBlog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://blog.hyperboly.net/favicon.ico"
+      "url": "https://blog.hyperboly.net/assets/favicon.ico"
     }
   }
 }
@@ -124,7 +127,7 @@ DISCLAIMER: Anything I write as fact should not be taken as fact, it is just the
     <h1 class="post-title">
       About
     </h1>
-    <div class="post-meta"><span title='2023-03-19 17:46:17 +0800 CST'>March 19, 2023</span>
+    <div class="post-meta"><span title='2023-03-19 17:46:17 +0800 CST'>March 19, 2023</span>&nbsp;·&nbsp;John Wu&nbsp;|&nbsp;<a href="https://github.com/hyperboly/blog.hyperboly.net/tree/main/content/about.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
 
 </div>
   </header> 
@@ -196,6 +199,53 @@ DISCLAIMER: Anything I write as fact should not be taken as fact, it is just the
         }
     };
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

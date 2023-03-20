@@ -43,9 +43,7 @@ Definitions: Abstraction I find that many people trying to get into computers ge
       <pubDate>Tue, 07 Jun 2022 18:09:07 +0800</pubDate>
       
       <guid>https://blog.hyperboly.net/posts/guides/gpupassthroughamd6600/</guid>
-      <description>A Comprehensive Guide on GPU Passthroughs in Proxmox Some Prerequisites and Notes This method of passing through my GPU works for:
- Kernel: 5.15.30 Proxmox Version 7.2 TUF Gaming X570 Plus Motherboard Dual Radeon RX6600XT Asus GPU Ryzen 7 5800X CPU  In the BIOs for your host computer (where Proxmox is installed) settings, these options should be modified:
- Secure boot: Off CPU Settings:  SUM: On PSS: On   PCI Subsystem Settings:  Above 4G Encoding: On SR-IOV Support: On   AMD CBS:  IOMMU: On    The Passthrough Process This is the part of the process where everything is either done in an ssh session, on the host computer&amp;rsquo;s shell, or the webGUI for proxmox.</description>
+      <description>A Comprehensive Guide on GPU Passthroughs in Proxmox for the RX6600XT GPU</description>
     </item>
     
   </channel>

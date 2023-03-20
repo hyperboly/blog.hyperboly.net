@@ -7,19 +7,16 @@
 <meta name="robots" content="index, follow">
 <title>GPU passthrough for RX6600XT | HyperBlog</title>
 <meta name="keywords" content="tech, guides">
-<meta name="description" content="A Comprehensive Guide on GPU Passthroughs in Proxmox Some Prerequisites and Notes This method of passing through my GPU works for:
- Kernel: 5.15.30 Proxmox Version 7.2 TUF Gaming X570 Plus Motherboard Dual Radeon RX6600XT Asus GPU Ryzen 7 5800X CPU  In the BIOs for your host computer (where Proxmox is installed) settings, these options should be modified:
- Secure boot: Off CPU Settings:  SUM: On PSS: On   PCI Subsystem Settings:  Above 4G Encoding: On SR-IOV Support: On   AMD CBS:  IOMMU: On    The Passthrough Process This is the part of the process where everything is either done in an ssh session, on the host computer&rsquo;s shell, or the webGUI for proxmox.">
+<meta name="description" content="A Comprehensive Guide on GPU Passthroughs in Proxmox for the RX6600XT GPU">
 <meta name="author" content="John Wu">
 <link rel="canonical" href="https://blog.hyperboly.net/posts/guides/gpupassthroughamd6600/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d7fb4cbf980fe688a21621b06a795933c4e6bb2d4070ec940667af1715d84af2.css" integrity="sha256-1/tMv5gP5oiiFiGwanlZM8Tmuy1AcOyUBmevFxXYSvI=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://blog.hyperboly.net/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://blog.hyperboly.net/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://blog.hyperboly.net/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://blog.hyperboly.net/apple-touch-icon.png">
-<link rel="mask-icon" href="https://blog.hyperboly.net/safari-pinned-tab.svg">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://blog.hyperboly.net/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.hyperboly.net/assets/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.hyperboly.net/assets/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.hyperboly.net/assets/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.hyperboly.net/assets/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -31,9 +28,7 @@
 
     </style>
 </noscript><meta property="og:title" content="GPU passthrough for RX6600XT" />
-<meta property="og:description" content="A Comprehensive Guide on GPU Passthroughs in Proxmox Some Prerequisites and Notes This method of passing through my GPU works for:
- Kernel: 5.15.30 Proxmox Version 7.2 TUF Gaming X570 Plus Motherboard Dual Radeon RX6600XT Asus GPU Ryzen 7 5800X CPU  In the BIOs for your host computer (where Proxmox is installed) settings, these options should be modified:
- Secure boot: Off CPU Settings:  SUM: On PSS: On   PCI Subsystem Settings:  Above 4G Encoding: On SR-IOV Support: On   AMD CBS:  IOMMU: On    The Passthrough Process This is the part of the process where everything is either done in an ssh session, on the host computer&rsquo;s shell, or the webGUI for proxmox." />
+<meta property="og:description" content="A Comprehensive Guide on GPU Passthroughs in Proxmox for the RX6600XT GPU" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.hyperboly.net/posts/guides/gpupassthroughamd6600/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-06-07T18:09:07&#43;08:00" />
@@ -41,9 +36,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="GPU passthrough for RX6600XT"/>
-<meta name="twitter:description" content="A Comprehensive Guide on GPU Passthroughs in Proxmox Some Prerequisites and Notes This method of passing through my GPU works for:
- Kernel: 5.15.30 Proxmox Version 7.2 TUF Gaming X570 Plus Motherboard Dual Radeon RX6600XT Asus GPU Ryzen 7 5800X CPU  In the BIOs for your host computer (where Proxmox is installed) settings, these options should be modified:
- Secure boot: Off CPU Settings:  SUM: On PSS: On   PCI Subsystem Settings:  Above 4G Encoding: On SR-IOV Support: On   AMD CBS:  IOMMU: On    The Passthrough Process This is the part of the process where everything is either done in an ssh session, on the host computer&rsquo;s shell, or the webGUI for proxmox."/>
+<meta name="twitter:description" content="A Comprehensive Guide on GPU Passthroughs in Proxmox for the RX6600XT GPU"/>
 
 
 <script type="application/ld+json">
@@ -72,12 +65,12 @@
   "@type": "BlogPosting",
   "headline": "GPU passthrough for RX6600XT",
   "name": "GPU passthrough for RX6600XT",
-  "description": "A Comprehensive Guide on GPU Passthroughs in Proxmox Some Prerequisites and Notes This method of passing through my GPU works for:\n Kernel: 5.15.30 Proxmox Version 7.2 TUF Gaming X570 Plus Motherboard Dual Radeon RX6600XT Asus GPU Ryzen 7 5800X CPU  In the BIOs for your host computer (where Proxmox is installed) settings, these options should be modified:\n Secure boot: Off CPU Settings:  SUM: On PSS: On   PCI Subsystem Settings:  Above 4G Encoding: On SR-IOV Support: On   AMD CBS:  IOMMU: On    The Passthrough Process This is the part of the process where everything is either done in an ssh session, on the host computer\u0026rsquo;s shell, or the webGUI for proxmox.",
+  "description": "A Comprehensive Guide on GPU Passthroughs in Proxmox for the RX6600XT GPU",
   "keywords": [
     "tech", "guides"
   ],
-  "articleBody": "A Comprehensive Guide on GPU Passthroughs in Proxmox Some Prerequisites and Notes This method of passing through my GPU works for:\n Kernel: 5.15.30 Proxmox Version 7.2 TUF Gaming X570 Plus Motherboard Dual Radeon RX6600XT Asus GPU Ryzen 7 5800X CPU  In the BIOs for your host computer (where Proxmox is installed) settings, these options should be modified:\n Secure boot: Off CPU Settings:  SUM: On PSS: On   PCI Subsystem Settings:  Above 4G Encoding: On SR-IOV Support: On   AMD CBS:  IOMMU: On    The Passthrough Process This is the part of the process where everything is either done in an ssh session, on the host computer’s shell, or the webGUI for proxmox.\nUpdate Proxmox First make sure your Proxmox is updated with the correct repos. You can follow the Proxmox docs for this.\nNext, you want to get your favorite text editor (Nano is preinstalled but I will use vim)\n # apt-get install vim\n GRUB/Systemd Edits For Systemd, every step will be the same, the only difference is you will edit /etc/kernel/cmdline for the GRUB flags, all flags will be the same.\n# vim /etc/default/grub to get edit a file. I assume you have background knowledge already in a terminal, if not, refer to vim(1) or nano(1).\nFind the line GRUB_CMDLINE_LINUX_DEFAULT = \"quiet\" and add these flags within the quotation marks:\n iommu=pt amd_iommu=on video=efifb:off video=vesafb:off textonly video=simplefb:off nofb\n Write quit.\n update-grub update-grub works even if you are on systemd boot.\n After this, reboot.\nMessing With Drivers Check if you did everything correctly with\n dmesg | grep -e DMAR -e IOMMU\n This should output something along the lines of “IOMMU enabled” or something like it.\nYou can also check with\n cat /proc/cmdline\n This should output what you modified in GRUB or systemd boot.\nNow you want to edit the /etc/modprobe.d/blacklist.conf file in order to blacklist your host machine from using your GPU so that the GPU isn’t split between your host and VM (splitting the processes will break it). Add these lines:\n blacklist nvidia\nblacklist nouveau\nblacklist radeon\n Now edit the /etc/modules file and add:\n vfio\nvfio_iommu_type1\nvfio_pci\nvfio_virqfd\n Now you update initramfs and reboot with:\n update-initramfs -u\nreboot\n Isolating Your GPU Run lspci -nnk and find your GPU. My RX6600XT GPU shows up as:\n 0a:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 23 [1002:73ff] (rev c1)\n Below it should be a audio controller. Mine looks like:\n 0a:00.1 Audio device [0403]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:ab28]\n Note the 0a:00 and [1002:XXXX], these will be important soon.\nNow you will edit /etc/modprobe.d/vfio.conf and add:\n options vfio-pci ids=XXXX:XXXX,XXXX:XXXX disable-vga=1\n Where XXXX:XXXX are substituted by the numbers in the [] before. For example, for me it would look like:\n options vfio-pci ids=1002:73ff,1002:ab28 disable_vga=1\n Now reboot again just in case.\nTo check if you are using the correct kernel module for your GPU, do lspci -v and see if your GPU’s kernel in use is vfio-pci or the line is just not there. If either is true, you’re halfway there.\nBlack Magic Section Welcome to Black Magic, where nothing in the section makes sense to me.\nRun cat /proc/iomem and under your GPU bus (0X:00, or for me it’s 0a:00), there might be a BOOTFB. If you don’t see BOOTFB, skip this section. If you do, follow the next steps carefully.\n cd /root\ntouch gpufix.sh\nvim gpufix.sh\n Inside this file, you will add these lines:\n #!/bin/bash\necho 1  /sys/bus/pci/devices/0000:0X:00.0/remove\necho 1  /sys/bus/pci/rescan\n Write and quit. Run chmod +x gpufix.sh. Lastly, add to the cron entry.\n crontab -e\n@reboot /root/gpufix.sh at the end of the file.\n Reboot.\nVM Creation If the settings are not mentioned in this segment, leave them as default. Go into the web GUI for Proxmox and click on create VM. I used a Windows 11 VM with VirtIO drivers (get the ISOs from Windows officially and Redhat unofficially).\nThe following segment are settings needed for this to work:\n System Settings:  q35 OVMF EFI disk and TPM (note that EFI and TPM must be stored on the same disk)   Disk Settings:  SCSI At least 50GB for Windows bloat   CPU:  As much as you can give it, for example 6 cores.   RAM:  As much as you can give it, for example 8GiB.   Networking:  Virt-IO (paravirtualized)   Do not start after creation.  After you have created the VM, go into the hardware settings and add an ISO image. This ISO image would be the Virt-IO drivers that you downloaded before. In the options tab in the VM under hardware check the Boot Order. The Boot Order should be your 50GB (or what you set it) hard disk first, your Windows ISO (in ide), net0, and lastly the Virt-IO drivers (ide).\nWindows 11 Installation First, be prepared for the pain and suffering Windows 11 installation can be. Linux is years ahead with the installation with the live USB thing, why can’t Microsoft catch up? Anyways, you’ll apply the virt-IO drivers here.\n Click on install Windows and custom install. You must select Windows 11 pro. This will prompt you into a window where you can select Load Drivers. In the file explorer, click on your C: or whatever drive that has the virt-IO drivers. Drop down the amd64 folder and choose the w11 folder. Press OK and Next. Load another driver called the NetKVM driver, choose NetKVMw11amd64. Go through the rest of the install process reading what it prompts you to do. CAREFULLY READ THESE BECAUSE YOU CAN OPT OUT OF SPYWARE… probably. After everything’s settled and you can log into Windows, go to file explorer and select the virt-IO drive once more. Click on virtio-win-gt-x64 and execute it. Shutdown the VM and go back to the Proxmox web GUI. Select hardware again and add a PCI device. Look for your 0X:00.0 vendor tag and select it. Tick every box except for primary GPU (PCI-express, ROM-Bar, All Functions). Start your VM up again. Go into the browser and look for AMD GPU drivers, download it and install it. While installing, you might notice your host machine’s monitor start displaying Windows but your mouse and keyboard may not be able to do anything. Reboot and follow the next section. Finally, tick the primary GPU option in your GPU options.  Finishing Touches By now, you are already set to go, except that you can’t do anything with your keyboard and mouse. To fix this, shutdown the VM once more and go to hardware settings in the Proxmox web GUI. Add USB devices and passthrough every port with your keyboard, mouse, whatever else you want. Now, you are truly done. Start up your VM and enjoy being exploited by Windows.\nExternal Links If you continue to struggle with GPU passthrough, here are all the articles I went through to find my solution.\n  Documentation  Proxmox Docs Arch Wiki Debian Docs    Unofficial Guides  Reddit Ultimate Guide (outdated) Reddit 2 Min Guide (outdated) Tutorial From Proxmox Forums RX6600XT Specific (didn’t work for me) Dumping V-BIOs Blog    Forums  Black Magic Radeon RX6600 Specific Post on Reddit Dumping V-BIOs Thread    Support This Guide If you have any other GPU’s that you got working whether absurdly like me or even normally, consider making a pull request for it or submitting an issue on the github!\n",
-  "wordCount" : "1202",
+  "articleBody": "A Comprehensive Guide on GPU Passthroughs in Proxmox For the RX6600XT GPU Some Prerequisites and Notes This method of passing through my GPU works for:\n Kernel: 5.15.30 Proxmox Version 7.2 TUF Gaming X570 Plus Motherboard Dual Radeon RX6600XT Asus GPU Ryzen 7 5800X CPU  In the BIOs for your host computer (where Proxmox is installed) settings, these options should be modified:\n Secure boot: Off CPU Settings:  SUM: On PSS: On   PCI Subsystem Settings:  Above 4G Encoding: On SR-IOV Support: On   AMD CBS:  IOMMU: On    The Passthrough Process This is the part of the process where everything is either done in an ssh session, on the host computer’s shell, or the webGUI for proxmox.\nUpdate Proxmox First make sure your Proxmox is updated with the correct repos. You can follow the Proxmox docs for this.\nNext, you want to get your favorite text editor (Nano is preinstalled but I will use vim)\n # apt-get install vim\n GRUB/Systemd Edits For Systemd, every step will be the same, the only difference is you will edit /etc/kernel/cmdline for the GRUB flags, all flags will be the same.\n# vim /etc/default/grub to get edit a file. I assume you have background knowledge already in a terminal, if not, refer to vim(1) or nano(1).\nFind the line GRUB_CMDLINE_LINUX_DEFAULT = \"quiet\" and add these flags within the quotation marks:\n iommu=pt amd_iommu=on video=efifb:off video=vesafb:off textonly video=simplefb:off nofb\n Write quit.\n update-grub update-grub works even if you are on systemd boot.\n After this, reboot.\nMessing With Drivers Check if you did everything correctly with\n dmesg | grep -e DMAR -e IOMMU\n This should output something along the lines of “IOMMU enabled” or something like it.\nYou can also check with\n cat /proc/cmdline\n This should output what you modified in GRUB or systemd boot.\nNow you want to edit the /etc/modprobe.d/blacklist.conf file in order to blacklist your host machine from using your GPU so that the GPU isn’t split between your host and VM (splitting the processes will break it). Add these lines:\n blacklist nvidia\nblacklist nouveau\nblacklist radeon\n Now edit the /etc/modules file and add:\n vfio\nvfio_iommu_type1\nvfio_pci\nvfio_virqfd\n Now you update initramfs and reboot with:\n update-initramfs -u\nreboot\n Isolating Your GPU Run lspci -nnk and find your GPU. My RX6600XT GPU shows up as:\n 0a:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 23 [1002:73ff] (rev c1)\n Below it should be a audio controller. Mine looks like:\n 0a:00.1 Audio device [0403]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:ab28]\n Note the 0a:00 and [1002:XXXX], these will be important soon.\nNow you will edit /etc/modprobe.d/vfio.conf and add:\n options vfio-pci ids=XXXX:XXXX,XXXX:XXXX disable-vga=1\n Where XXXX:XXXX are substituted by the numbers in the [] before. For example, for me it would look like:\n options vfio-pci ids=1002:73ff,1002:ab28 disable_vga=1\n Now reboot again just in case.\nTo check if you are using the correct kernel module for your GPU, do lspci -v and see if your GPU’s kernel in use is vfio-pci or the line is just not there. If either is true, you’re halfway there.\nBlack Magic Section Welcome to Black Magic, where nothing in the section makes sense to me.\nRun cat /proc/iomem and under your GPU bus (0X:00, or for me it’s 0a:00), there might be a BOOTFB. If you don’t see BOOTFB, skip this section. If you do, follow the next steps carefully.\n cd /root\ntouch gpufix.sh\nvim gpufix.sh\n Inside this file, you will add these lines:\n #!/bin/bash\necho 1  /sys/bus/pci/devices/0000:0X:00.0/remove\necho 1  /sys/bus/pci/rescan\n Write and quit. Run chmod +x gpufix.sh. Lastly, add to the cron entry.\n crontab -e\n@reboot /root/gpufix.sh at the end of the file.\n Reboot.\nVM Creation If the settings are not mentioned in this segment, leave them as default. Go into the web GUI for Proxmox and click on create VM. I used a Windows 11 VM with VirtIO drivers (get the ISOs from Windows officially and Redhat unofficially).\nThe following segment are settings needed for this to work:\n System Settings:  q35 OVMF EFI disk and TPM (note that EFI and TPM must be stored on the same disk)   Disk Settings:  SCSI At least 50GB for Windows bloat   CPU:  As much as you can give it, for example 6 cores.   RAM:  As much as you can give it, for example 8GiB.   Networking:  Virt-IO (paravirtualized)   Do not start after creation.  After you have created the VM, go into the hardware settings and add an ISO image. This ISO image would be the Virt-IO drivers that you downloaded before. In the options tab in the VM under hardware check the Boot Order. The Boot Order should be your 50GB (or what you set it) hard disk first, your Windows ISO (in ide), net0, and lastly the Virt-IO drivers (ide).\nWindows 11 Installation First, be prepared for the pain and suffering Windows 11 installation can be. Linux is years ahead with the installation with the live USB thing, why can’t Microsoft catch up? Anyways, you’ll apply the virt-IO drivers here.\n Click on install Windows and custom install. You must select Windows 11 pro. This will prompt you into a window where you can select Load Drivers. In the file explorer, click on your C: or whatever drive that has the virt-IO drivers. Drop down the amd64 folder and choose the w11 folder. Press OK and Next. Load another driver called the NetKVM driver, choose NetKVMw11amd64. Go through the rest of the install process reading what it prompts you to do. CAREFULLY READ THESE BECAUSE YOU CAN OPT OUT OF SPYWARE… probably. After everything’s settled and you can log into Windows, go to file explorer and select the virt-IO drive once more. Click on virtio-win-gt-x64 and execute it. Shutdown the VM and go back to the Proxmox web GUI. Select hardware again and add a PCI device. Look for your 0X:00.0 vendor tag and select it. Tick every box except for primary GPU (PCI-express, ROM-Bar, All Functions). Start your VM up again. Go into the browser and look for AMD GPU drivers, download it and install it. While installing, you might notice your host machine’s monitor start displaying Windows but your mouse and keyboard may not be able to do anything. Reboot and follow the next section. Finally, tick the primary GPU option in your GPU options.  Finishing Touches By now, you are already set to go, except that you can’t do anything with your keyboard and mouse. To fix this, shutdown the VM once more and go to hardware settings in the Proxmox web GUI. Add USB devices and passthrough every port with your keyboard, mouse, whatever else you want. Now, you are truly done. Start up your VM and enjoy being exploited by Windows.\nExternal Links If you continue to struggle with GPU passthrough, here are all the articles I went through to find my solution.\n  Documentation  Proxmox Docs Arch Wiki Debian Docs    Unofficial Guides  Reddit Ultimate Guide (outdated) Reddit 2 Min Guide (outdated) Tutorial From Proxmox Forums RX6600XT Specific (didn’t work for me) Dumping V-BIOs Blog    Forums  Black Magic Radeon RX6600 Specific Post on Reddit Dumping V-BIOs Thread    Support This Guide If you have any other GPU’s that you got working whether absurdly like me or even normally, consider making a pull request for it or submitting an issue on the github!\n",
+  "wordCount" : "1206",
   "inLanguage": "en",
   "datePublished": "2022-06-07T18:09:07+08:00",
   "dateModified": "2022-06-07T18:09:07+08:00",
@@ -94,7 +87,7 @@
     "name": "HyperBlog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://blog.hyperboly.net/favicon.ico"
+      "url": "https://blog.hyperboly.net/assets/favicon.ico"
     }
   }
 }
@@ -137,11 +130,64 @@
     <h1 class="post-title">
       GPU passthrough for RX6600XT
     </h1>
-    <div class="post-meta"><span title='2022-06-07 18:09:07 +0800 CST'>June 7, 2022</span>&nbsp;·&nbsp;John Wu
+    <div class="post-description">
+      A Comprehensive Guide on GPU Passthroughs in Proxmox for the RX6600XT GPU
+    </div>
+    <div class="post-meta"><span title='2022-06-07 18:09:07 +0800 CST'>June 7, 2022</span>&nbsp;·&nbsp;John Wu&nbsp;|&nbsp;<a href="https://github.com/hyperboly/blog.hyperboly.net/tree/main/content/posts/guides/GPUpassthroughAMD6600.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
 
 </div>
-  </header> 
-  <div class="post-content"><h1 id="a-comprehensive-guide-on-gpu-passthroughs-in-proxmox">A Comprehensive Guide on GPU Passthroughs in Proxmox<a hidden class="anchor" aria-hidden="true" href="#a-comprehensive-guide-on-gpu-passthroughs-in-proxmox">#</a></h1>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#a-comprehensive-guide-on-gpu-passthroughs-in-proxmox-for-the-rx6600xt-gpu" aria-label="A Comprehensive Guide on GPU Passthroughs in Proxmox For the RX6600XT GPU">A Comprehensive Guide on GPU Passthroughs in Proxmox For the RX6600XT GPU</a></li>
+                <li>
+                    <a href="#some-prerequisites-and-notes" aria-label="Some Prerequisites and Notes">Some Prerequisites and Notes</a></li>
+                <li>
+                    <a href="#the-passthrough-process" aria-label="The Passthrough Process">The Passthrough Process</a><ul>
+                        
+                <li>
+                    <a href="#update-proxmox" aria-label="Update Proxmox">Update Proxmox</a></li>
+                <li>
+                    <a href="#grubsystemd-edits" aria-label="GRUB/Systemd Edits">GRUB/Systemd Edits</a></li>
+                <li>
+                    <a href="#messing-with-drivers" aria-label="Messing With Drivers">Messing With Drivers</a></li>
+                <li>
+                    <a href="#isolating-your-gpu" aria-label="Isolating Your GPU">Isolating Your GPU</a></li>
+                <li>
+                    <a href="#black-magic-section" aria-label="Black Magic Section">Black Magic Section</a></li>
+                <li>
+                    <a href="#vm-creation" aria-label="VM Creation">VM Creation</a></li>
+                <li>
+                    <a href="#windows-11-installation" aria-label="Windows 11 Installation">Windows 11 Installation</a></li>
+                <li>
+                    <a href="#finishing-touches" aria-label="Finishing Touches">Finishing Touches</a></li></ul>
+                </li>
+                <li>
+                    <a href="#external-links" aria-label="External Links">External Links</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#documentation" aria-label="Documentation">Documentation</a></li>
+                <li>
+                    <a href="#unofficial-guides" aria-label="Unofficial Guides">Unofficial Guides</a></li>
+                <li>
+                    <a href="#forums" aria-label="Forums">Forums</a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#support-this-guide" aria-label="Support This Guide">Support This Guide</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="a-comprehensive-guide-on-gpu-passthroughs-in-proxmox-for-the-rx6600xt-gpu">A Comprehensive Guide on GPU Passthroughs in Proxmox For the RX6600XT GPU<a hidden class="anchor" aria-hidden="true" href="#a-comprehensive-guide-on-gpu-passthroughs-in-proxmox-for-the-rx6600xt-gpu">#</a></h2>
 <h2 id="some-prerequisites-and-notes">Some Prerequisites and Notes<a hidden class="anchor" aria-hidden="true" href="#some-prerequisites-and-notes">#</a></h2>
 <p>This method of passing through my GPU works for:</p>
 <ul>
@@ -414,6 +460,53 @@ The following segment are settings <em><strong>needed</strong></em> for this to 
         }
     };
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

@@ -4,6 +4,7 @@ title: "Memory Basics"
 date: 2023-03-19T20:08:56+08:00
 author: John Wu
 tags: ['CTFs','tech']
+summary: "How memory is structured and what it really is"
 ShowToc: true
 
 ---
@@ -11,7 +12,7 @@ ShowToc: true
 Memory is essential to understand for pwning in CTFs. Here, I will try to explain the structure of memory and behaviors for beginners in pwn.
 
 ## Definition of Memory
-First, a basic definition of memory. Have you ever seen that long card in your computer with black squares on it? That's memory. Most people (who watch Linus Tech Tips) know this as Random Access Memory (RAM), but at the core it is just temporary storage on your computer.
+First, a basic definition of memory. Have you ever seen that long card in your computer with black squares on it? That's memory. Most people (who watch Linus Tech Tips) know this as Random Access Memory (RAM), but at the core it is just temporary storage on your computer. RAM is immediately wiped after rebooting your computer, but is much faster than writing onto your SSD or hard drive. Functions that require temporary and fast speeds would use RAM; this includes caching websites, displaying text in a GUI, and loading chunks in games.
 ![RAM Stick](/RAM-stick.jpg)
 
 ## Memory Structure

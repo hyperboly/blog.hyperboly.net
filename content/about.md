@@ -1,6 +1,8 @@
 ---
 title: "About"
 date: 2023-03-19T17:46:17+08:00
+author: John Wu
+searchHidden: true
 draft: false
 ---
 

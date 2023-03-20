@@ -23,6 +23,8 @@ params:
       url: "mailto:johnwuonmail@gmail.com"
     - name: "github"
       url: "https://github.com/hyperboly/blog.hyperboly.net.git"
+    - name: "instagram"
+      url: "https://www.instagram.com/cookie_elmo1/"
     - name: "rss"
       url: "/index.xml"
 

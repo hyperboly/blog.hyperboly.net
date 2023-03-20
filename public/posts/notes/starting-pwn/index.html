@@ -7,17 +7,16 @@
 <meta name="robots" content="index, follow">
 <title>Starting Pwn | HyperBlog</title>
 <meta name="keywords" content="tech, CTFs">
-<meta name="description" content="Pwn as a CTF category has always interested me because of the low level understanding it requires to be good at it. Turns out I&rsquo;m terrible at it, so here are my notes to try and organize what I&rsquo;ve learned. The pico primer really helped me with this. CryptoCat&rsquo;s tutorial is also great for learning.
-Definitions: Abstraction I find that many people trying to get into computers get confused with abstraction as I did before, so I&rsquo;ll try to explain it in simple terms.">
+<meta name="description" content="An introduction to the pwn (binary exploit) category for CTFs">
 <meta name="author" content="John Wu">
 <link rel="canonical" href="https://blog.hyperboly.net/posts/notes/starting-pwn/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://blog.hyperboly.net/assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://blog.hyperboly.net/assets/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://blog.hyperboly.net/assets/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://blog.hyperboly.net/assets/apple-touch-icon.png">
-<link rel="mask-icon" href="https://blog.hyperboly.net/assets/safari-pinned-tab.svg">
+<link rel="icon" href="https://blog.hyperboly.net/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.hyperboly.net/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.hyperboly.net/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.hyperboly.net/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.hyperboly.net/favicons/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -29,8 +28,7 @@ Definitions: Abstraction I find that many people trying to get into computers ge
 
     </style>
 </noscript><meta property="og:title" content="Starting Pwn" />
-<meta property="og:description" content="Pwn as a CTF category has always interested me because of the low level understanding it requires to be good at it. Turns out I&rsquo;m terrible at it, so here are my notes to try and organize what I&rsquo;ve learned. The pico primer really helped me with this. CryptoCat&rsquo;s tutorial is also great for learning.
-Definitions: Abstraction I find that many people trying to get into computers get confused with abstraction as I did before, so I&rsquo;ll try to explain it in simple terms." />
+<meta property="og:description" content="An introduction to the pwn (binary exploit) category for CTFs" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.hyperboly.net/posts/notes/starting-pwn/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-03-19T19:05:02&#43;08:00" />
@@ -38,8 +36,7 @@ Definitions: Abstraction I find that many people trying to get into computers ge
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Starting Pwn"/>
-<meta name="twitter:description" content="Pwn as a CTF category has always interested me because of the low level understanding it requires to be good at it. Turns out I&rsquo;m terrible at it, so here are my notes to try and organize what I&rsquo;ve learned. The pico primer really helped me with this. CryptoCat&rsquo;s tutorial is also great for learning.
-Definitions: Abstraction I find that many people trying to get into computers get confused with abstraction as I did before, so I&rsquo;ll try to explain it in simple terms."/>
+<meta name="twitter:description" content="An introduction to the pwn (binary exploit) category for CTFs"/>
 
 
 <script type="application/ld+json">
@@ -68,7 +65,7 @@ Definitions: Abstraction I find that many people trying to get into computers ge
   "@type": "BlogPosting",
   "headline": "Starting Pwn",
   "name": "Starting Pwn",
-  "description": "Pwn as a CTF category has always interested me because of the low level understanding it requires to be good at it. Turns out I\u0026rsquo;m terrible at it, so here are my notes to try and organize what I\u0026rsquo;ve learned. The pico primer really helped me with this. CryptoCat\u0026rsquo;s tutorial is also great for learning.\nDefinitions: Abstraction I find that many people trying to get into computers get confused with abstraction as I did before, so I\u0026rsquo;ll try to explain it in simple terms.",
+  "description": "An introduction to the pwn (binary exploit) category for CTFs",
   "keywords": [
     "tech", "CTFs"
   ],
@@ -90,7 +87,7 @@ Definitions: Abstraction I find that many people trying to get into computers ge
     "name": "HyperBlog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://blog.hyperboly.net/assets/favicon.ico"
+      "url": "https://blog.hyperboly.net/favicons/favicon.ico"
     }
   }
 }
@@ -215,7 +212,16 @@ Definitions: Abstraction I find that many people trying to get into computers ge
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a>
+</a><footer>
+  <div>
+    <p>
+    &copy; 2013-14 Steve Francia.
+    <a href="https://creativecommons.org/licenses/by/3.0/" title="Creative Commons Attribution">Some rights reserved</a>;
+    please attribute properly and link back.
+    </p>
+  </div>
+</footer>
+
 
 <script>
     let menu = document.getElementById('menu')

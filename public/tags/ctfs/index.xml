@@ -13,8 +13,7 @@
       <pubDate>Sun, 19 Mar 2023 20:08:56 +0800</pubDate>
       
       <guid>https://blog.hyperboly.net/posts/notes/memory-basics/</guid>
-      <description>Memory is essential to understand for pwning in CTFs. Here, I will try to explain the structure of memory and behaviors for beginners in pwn.
-Definition of Memory First, a basic definition of memory. Have you ever seen that long card in your computer with black squares on it? That&amp;rsquo;s memory. Most people (who watch Linus Tech Tips) know this as Random Access Memory (RAM), but at the core it is just temporary storage on your computer.</description>
+      <description>How memory is structured and what it really is</description>
     </item>
     
     <item>
@@ -23,8 +22,7 @@ Definition of Memory First, a basic definition of memory. Have you ever seen tha
       <pubDate>Sun, 19 Mar 2023 19:05:02 +0800</pubDate>
       
       <guid>https://blog.hyperboly.net/posts/notes/starting-pwn/</guid>
-      <description>Pwn as a CTF category has always interested me because of the low level understanding it requires to be good at it. Turns out I&amp;rsquo;m terrible at it, so here are my notes to try and organize what I&amp;rsquo;ve learned. The pico primer really helped me with this. CryptoCat&amp;rsquo;s tutorial is also great for learning.
-Definitions: Abstraction I find that many people trying to get into computers get confused with abstraction as I did before, so I&amp;rsquo;ll try to explain it in simple terms.</description>
+      <description>An introduction to the pwn (binary exploit) category for CTFs</description>
     </item>
     
   </channel>

@@ -2,7 +2,9 @@ baseURL: "https://blog.hyperboly.net/"
 languageCode: en-us
 title: HyperBlog
 theme: PaperMod
+
 paginate: 5
+enableRobotsTXT: true
 
 params:
   title: "HyperBlog"

@@ -6,22 +6,31 @@
     <description>Recent content in Tags on HyperBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Mar 2023 20:08:56 +0800</lastBuildDate><atom:link href="https://blog.hyperboly.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Mar 2023 00:28:13 +0800</lastBuildDate><atom:link href="https://blog.hyperboly.net/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CTFs</title>
-      <link>https://blog.hyperboly.net/tags/ctfs/</link>
-      <pubDate>Sun, 19 Mar 2023 20:08:56 +0800</pubDate>
+      <title>rant</title>
+      <link>https://blog.hyperboly.net/tags/rant/</link>
+      <pubDate>Mon, 20 Mar 2023 00:28:13 +0800</pubDate>
       
-      <guid>https://blog.hyperboly.net/tags/ctfs/</guid>
+      <guid>https://blog.hyperboly.net/tags/rant/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tech</title>
       <link>https://blog.hyperboly.net/tags/tech/</link>
-      <pubDate>Sun, 19 Mar 2023 20:08:56 +0800</pubDate>
+      <pubDate>Mon, 20 Mar 2023 00:28:13 +0800</pubDate>
       
       <guid>https://blog.hyperboly.net/tags/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CTFs</title>
+      <link>https://blog.hyperboly.net/tags/ctfs/</link>
+      <pubDate>Sun, 19 Mar 2023 20:08:56 +0800</pubDate>
+      
+      <guid>https://blog.hyperboly.net/tags/ctfs/</guid>
       <description></description>
     </item>
     

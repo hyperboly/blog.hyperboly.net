@@ -3,6 +3,7 @@
 title: "Starting Pwn"
 date: 2023-03-19T19:05:02+08:00
 author: John Wu
+ShowToc: true
 tags: ['tech','CTFs']
 
 ---

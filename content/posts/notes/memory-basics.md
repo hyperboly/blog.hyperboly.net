@@ -4,6 +4,7 @@ title: "Memory Basics"
 date: 2023-03-19T20:08:56+08:00
 author: John Wu
 tags: ['CTFs','tech']
+ShowToc: true
 
 ---
 
@@ -15,7 +16,7 @@ First, a basic definition of memory. Have you ever seen that long card in your c
 
 ## Memory Structure
 I will abstract a lot of the memory structure here, so read on knowing there will be inaccuracies. Think of memory as a building, each floor is a storage space, and a building only has so many floors. Each floor and groups of floors can have a different purpose, the basement is for parking, floor 1 is for the lobby, floor 2 is for a restaurant, and the rest are residential. Now think of the floors as space in memory. There are 3 main spaces in memory, the data, stack, and heap.
-### Diagram of Memory
+#### Diagram of Memory
 | Memory Space | Description                     |
 |--------------|---------------------------------|
 | Data         | Is where "static" variables are |
@@ -30,6 +31,6 @@ Probably more important than variables in the stack is the pointer and addresses
 
 The stack does NOT include the buffers, which is in the "heap."
 #### The Heap Memory Space
-The heap is, as mentioned, where the buffers live. But what are buffers? Buffers are spaces in code that the programmer dictates. How is this different from declaring a variable in the stack? Stack variables can't be resized, but buffers can. If I create a array in C, like this: `int ary[100]`, I am dynamically assigning 100 bytes to `ary`. Confused? Me too! Stack variables have the life cycle of being declared, stored, and initialized during **runtime**. When the function ends, so do the variables in the stack.
+The heap is, as mentioned, where the buffers live. But what are buffers? Buffers are spaces in code that the programmer dictates. How is this different from declaring a variable in the stack? Stack variables can't be resized, but buffers can. If I create a array in C, like this: `int ary[100]`, I am dynamically assigning 404 bytes to `ary` (0-100 integers, each int is 4 bytes). Confused? Me too! Stack variables have the life cycle of being declared, stored, and initialized during **runtime**. When the function ends, so do the variables in the stack.
 
-The heap is more "floaty," as in it exists in no particular order. Multiple buffers can live in memory without an order like stack variables do. The memory allocated is also decided by the programmer, not the compiler. Before I mentioned `int` takes 4 bytes of space, this is not a decision by the programmer but by the compiler. Compared to `int ary[100]`, the programmer specifies that he wants 100 bytes for this.
+The heap is more "floaty," as in it exists in no particular order. Multiple buffers can live in memory without an order like stack variables do. The memory allocated is also decided by the programmer, not the compiler. Before I mentioned `int` takes 4 bytes of space, this is not a decision by the programmer but by the compiler. Compared to `int ary[100];`, the programmer specifies that he wants 404 bytes for this.

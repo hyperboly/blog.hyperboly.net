@@ -3,6 +3,7 @@
 title: "GPU passthrough for RX6600XT"
 date: 2022-06-07T18:09:07+08:00
 author: John Wu
+ShowToc: true
 tags: ['tech', 'guides']
 
 ---

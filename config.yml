@@ -9,6 +9,8 @@ params:
   description: "My blog because I'm a super loner"
   defaultTheme: dark
   disableThemeToggle: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
 
   homeInfoParams:
     Title: "HyperBlog"
@@ -18,9 +20,23 @@ params:
     - name: "email"
       url: "mailto:johnwuonmail@gmail.com"
     - name: "github"
-      url: "https://github.com/hyperboly/techsite"
+      url: "https://github.com/hyperboly/blog.hyperboly.net.git"
     - name: "rss"
       url: "/index.xml"
+
+  assets:
+    disableFingerprinting: true
+    favicon: "/assets/favicon.ico"
+    favicon16x16: "/assets/favicon-16x16.png"
+    favicon32x32: "/assets/favicon-32x32.png"
+    apple_touch_icon: "/assets/apple-touch-icon.png"
+    safari_pinned_tab: "/assets/safari-pinned-tab.svg"
+
+  editPost:
+    URL: "https://github.com/hyperboly/blog.hyperboly.net/tree/main/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -49,3 +65,6 @@ menu:
       url: tags/
     - name: Search
       url: /search
+
+
+

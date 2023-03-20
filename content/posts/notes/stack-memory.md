@@ -54,11 +54,17 @@ The Stack Pointer (SP) points to where the last item pushed onto the stack is. W
 ![Stack Visualization](/CTF-notes/mem-stack.jpg)
 
 ## General Registers
-The above explanation is only a high level of registers, there is a lot more happening in the memory on a CPU.
-### Base Registers
+The above explanation is only a high level of registers, there is a lot more happening in the memory on a CPU. Note that registers for **64 bit** architecture computers are different from 32 bit registers. Registers will start with an "R" in 64 bit (RAX) unlike 32 bit registers that start with "E" (EAX).
+### Accumulator Registers: RAX, EAX
+Accumulator Registers hold temporary information to process every instruction in a program and store the results in the accumulator. From the name, you can probably tell that this is a step by step process, meaning that if I do 1 + 2 + 7, the accumulator would first have the value 1 (starting int), then 3 (1 + 2), and finally 10 (3 + 7).
+
+[Further reading](https://www.geeksforgeeks.org/introduction-of-single-accumulator-based-cpu-organization)
+### Base Registers: REX, EBX
+Base registers are registers for storing where a stack is in memory. Changing (adding/subtracting) the offset of this can allow you to access variables.
 ### Counter Registers
 ### Data Registers
 
 ## Sources and Further Reading
 [Cool presentation](http://www.ee.nmt.edu/~erives/308L_05/The_stack.pdf)
 [tutorialspoint.com](https://www.tutorialspoint.com/what-is-memory-stack-in-computer-architecture)
+[pico primer](https://primer.picoctf.org/#_general_registers)

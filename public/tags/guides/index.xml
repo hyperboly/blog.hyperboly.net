@@ -6,7 +6,16 @@
     <description>Recent content in guides on HyperBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jun 2022 18:09:07 +0800</lastBuildDate><atom:link href="https://blog.hyperboly.net/tags/guides/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Mar 2023 21:25:07 +0800</lastBuildDate><atom:link href="https://blog.hyperboly.net/tags/guides/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building This Blog</title>
+      <link>https://blog.hyperboly.net/posts/guides/building-this-blog/</link>
+      <pubDate>Mon, 20 Mar 2023 21:25:07 +0800</pubDate>
+      
+      <guid>https://blog.hyperboly.net/posts/guides/building-this-blog/</guid>
+      <description>The secrets to building this simple and fast blog</description>
+    </item>
+    
     <item>
       <title>GPU passthrough for RX6600XT</title>
       <link>https://blog.hyperboly.net/posts/guides/gpupassthroughamd6600/</link>

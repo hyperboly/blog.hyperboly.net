@@ -4,6 +4,7 @@ title: "Building This Blog"
 date: 2023-03-20T21:25:07+08:00
 author: John Wu
 summary: "The secrets to building this simple and fast blog"
+tags: ['guides','tech']
 TocShow: true
 draft: false
 

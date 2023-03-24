@@ -5,6 +5,7 @@ date: 2023-03-20T00:28:13+08:00
 author: John Wu
 tags: ['tech','rant']
 summary: "LINE is a terrible instant messaging app and no one should use it"
+ShowToc: true
 draft: false
 
 ---

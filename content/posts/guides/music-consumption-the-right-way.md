@@ -51,6 +51,19 @@ I will run through a basic example of how to use it, although the prompts should
 ```bash
 ./ytpl-update # copy the code or clone the repo and execute it
 
+# ytpl-update will check if you have the latest version of yt-dlp installed and attempt to update if there is. Will also attempt to install if not already installed
+
+Which directory would you like to download to (Ex. ~/Music/example)? # Enter in the folder you want to download to
+~/Music/all-my-songs
+
+Insert playlist URL you would like to download/update # Do not add quotes, just the URL will work
+%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLBVTuiShXIE7sDtTKaW4CygVLUEv7zNv2
+
+Downloading music from remote, please make sure test is the correct directory
+Continue?  [y/n]: # will only take "y" or "n" as input. "y" is yes and "n" is no
+y
+
+# Downloading will start now, wait until the download process is finished and you are gold
 ```
 
 ## Syncthing

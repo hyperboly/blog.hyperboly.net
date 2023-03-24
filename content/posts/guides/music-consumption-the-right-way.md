@@ -49,7 +49,11 @@ Because this script was not designed with the UNIX philosophy in mind and more "
 I will run through a basic example of how to use it, although the prompts should make it clear already.
 
 ```bash
-./ytpl-update # copy the code or clone the repo and execute it
+# copy the code or clone the repo
+
+chmod +x ytpl-update
+
+./ytpl-update # run the script
 
 # ytpl-update will check if you have the latest version of yt-dlp installed and attempt to update if there is. Will also attempt to install if not already installed
 
@@ -67,5 +71,16 @@ y
 ```
 
 ## Syncthing
+How will I get all this music from my Linux laptop to my phone? How will the files be automatically synced together when I add or delete files?
+Syncthing. The answer is always syncthing.
+
+### Installation
+For Windows: https://docs.syncthing.net/intro/getting-started.html
+For Linux: https://apt.syncthing.net/ (unfortunately I can only find installation for apt, arch, and nix. Fedora users you are alone, sorry)
+For android: https://play.google.com/store/apps/details?id=com.github.catfriend1.syncthingandroid
+Sorry no iOS, not really sorry. You shouldn't be using Apple products anyways
+
+Now it's just a matter of linking your devices together to recognize each other and share the device over
+
 
 ## Links

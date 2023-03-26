@@ -13,6 +13,7 @@ params:
   disableThemeToggle: true
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
+  env: "production"
 
   homeInfoParams:
     Title: "HyperBlog"

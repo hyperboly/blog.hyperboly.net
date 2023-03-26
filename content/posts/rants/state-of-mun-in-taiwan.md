@@ -33,13 +33,13 @@ When I started MUN, there were only a few that really stood out.
 - TASMUN: for the ultra rich, the people with the big bags. Also international
 
 International MUNs here just mean that international schools go (TAS, KAS, IBSH...).
-MUNs at the time had a level of prestige (not that it ever had any).
+MUNs at the time had a level of prestige (not that it ever had a lot).
 Maybe I was too young at the time and just remember things from childhood as good (like old people), but I think this point stands.
-There were around 4 MUNs per year and when you went, it felt much more "prestigious" because of the low quantity/high demand
+There were around 4 MUNs per year and when you went, it felt much more "prestigious" because of the low quantity/high demand.
 
 Our school used to co-host STMUN, until KAS committed a hostile takeover with I-Shou against Dr. Fruit.
 Doctor was just too good for them.
-I do believe that it was either Dr. Fruit or Ms. Bigley that started the MUN, maybe it wasn't.
+I do believe that it was either Dr. Fruit or Ms. Bigley that started the whole MUN stuff in Taiwan, maybe it wasn't.
 It is believable though because we did start the english debate scene in Taiwan.
 
 ## The Status Quo
@@ -50,8 +50,8 @@ I'm so smart I can use big words and sound like I know what I'm doing!!!
 This train of thought is how I imagine MUN people to think.
 Not just MUN people, but debaters too.
 How do I know? Because I think this too.
-I don't care how much people deny it, when you speak with high syllable count words, you are acting smart.
-Local school participation in international MUNs are low because of this high entry due to language barriers.
+I don't care how much people deny it, when you have too many syllables in every 2 words you say, you are acting smart.
+Local school participation in international MUNs are low because of this high entry language barriers.
 
 ### Second Problem
 I don't know how it started, but local schools had a demand for MUNs.
@@ -74,8 +74,8 @@ So obviously there is high demand.
 With so many MUNs, there obviously comes a problem.
 
 #### Stretching Out Your Audience
-This issue relates for both delegates and organizers.
-For organizers, this means that you will only have one to two committees for your event, which is not good for trying to become big as an MUN.
+This issue relates to both delegates and organizers.
+For organizers, this means that you will only have one to two committees for your event, which is not good for trying to become a big/popular MUN.
 For delegates, this means you will pay to go to MUNs that have very little recognition and very low quantity of people. We're not even talking about debate quality (of course, MUN debate quality has never been good).
 Good MUN debaters are rare, and with so many options for MUNs, you are stretching out where they will go.
 Some may stick with tradition and go to STMUN, or try a new one like Ming Dao.
@@ -137,10 +137,11 @@ One thing I can see needing to happen is decreasing the amount of MUNs, this wil
 The other is restructuring how MUNs are hosted.
 There has been a constant decrease in MUN quality every year.
 HSINMUN used to be okay, but now the organization has become terrible.
-The main problem is in organizers choosing their friends to do organize.
+The main problem is in organizers choosing their friends to organize MUNs.
 The other problem is the lack of teacher supervision.
 Modern HSINMUN and STMUN are obvious products of students hosting an event.
-The problem is that there are so many people attending, they get a pass.
+Many people don't see this as a problem because there are so many delegates attending, they get a pass.
+The delegates are only there because they are famous for their quality when teachers ran the MUN, but now their quality has dipped to negative.
 
 Restructure your leadership please.
 

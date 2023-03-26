@@ -5,6 +5,7 @@ date: 2023-03-24T21:21:08+08:00
 author: John Wu
 summary: "Learn how I get adless, downloaded, high enough quality music all for free."
 TocShow: true
+tags: ["guides", "tech"]
 draft: false
 
 ---

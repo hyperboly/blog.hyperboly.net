@@ -6,7 +6,7 @@ author: John Wu
 summary: "The bubble of MUN we live in."
 ShowToc: true
 tags: ["rant"]
-draft: true
+draft: false
 
 ---
 

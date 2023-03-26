@@ -14,7 +14,7 @@ I got tired of Spotify stealing my information, showing me ads, and draining my 
 ## Tools
 ### Downloading Music
 `yt-dlp`:
-- A fork of `youtube-dl`, but uses aria2 and bypasses a lot of DRM, generally better I think
+- A fork of `youtube-dl`, but uses aria2 and bypasses a lot of DRM, and is generally better I think
 - Will be used for downloading songs, playlists...
 ### Syncing Music
 `syncthing`:
@@ -80,7 +80,53 @@ For Linux: https://apt.syncthing.net/ (unfortunately I can only find installatio
 For android: https://play.google.com/store/apps/details?id=com.github.catfriend1.syncthingandroid
 Sorry no iOS, not really sorry. You shouldn't be using Apple products anyways
 
-Now it's just a matter of linking your devices together to recognize each other and share the device over
+Now it's just a matter of linking your devices together to recognize each other and share the device over. This process is simple.
 
+### Connect Your Devices
 
-## Links
+#### On Linux
+Once installed from Ubuntu or Debian, the daemon should be already created.
+```bash
+systemctl --user enable --now syncthing.service
+```
+This will enable sycnthing at startup and you can go to [http://127.0.0.1:8384](http://127.0.0.1:8384) to access the syncthing webUI
+
+#### On Windows
+I haven't used syncthing on Windows, but you can check [this video](https://www.youtube.com/watch?v=02XeIATCDO4).
+
+#### On Android
+The service should be automatically started once you access the app and check the start conditions
+
+#### In the webUI
+[Video form](https://www.youtube.com/watch?v=02XeIATCDO4)
+
+Now that your services are setup, you want to link them. Head to [http://127.0.0.1:8384](http://127.0.0.1:8384).
+On your laptop or computer, add a new folder to share under "Folders" > "+ Add Folder".
+You can label the folder anything you want, I named it "All Songs."
+The folder ID can also be modified, just make sure you don't use special characters or spaces. Something like "all-songs".
+On the folder path, add in where you downloaded your music from yt-dlp, for me it was `/home/hyperboly/Music/allSongs`.
+You can check by going to where you downloaded the music and copying the output of `pwd`.
+
+After you add the folder, click on "Actions" in the top right corner of the webUI.
+Click on "Show ID", and go to your syncthing app on your phone.
+On your phone, select devices and on the top right corner press the add new device icon.
+Press on the QR icon on the right of ID, and scan the QR code on your laptop.
+Create a name for the device and press the checkmark.
+This should add the device.
+
+Now on your laptop, there should be a dialogue box that tells you your phone wants to link up, confirm it.
+Click on the music folder you added and press "Edit".
+Select "Sharing" in blue text and tick the checkbox for your phone's name that you set.
+Now your phone should have a notification to confirm sharing the folder, confirm it and set where you want the download to go.
+The syncing should start now and you are basically finished.
+
+## What Now?
+Android has a terrible default music player, I suggest you use Vinyl from fdroid if you want a better experience.
+
+You can use syncthing for things other than music, on as many devices as you want.
+
+Adding music to your playlist on youtube won't automatically add it to your downloads.
+When you want to update your downloaded playlist, just run the same command (or my script) again and it will automatically download the new music from Youtube.
+When your playlist folder on your computer updates, syncthing will sync your phone up at the same time.
+
+Drawbacks: Syncthing will only sync when you are connected to the same network (same wifi, same router...) so if your phone isn't connected to the same wifi as your computer, your files will not sync.

@@ -6,7 +6,16 @@
     <description>Recent content on HyperBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Mar 2023 21:21:08 +0800</lastBuildDate><atom:link href="https://blog.hyperboly.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Mar 2023 15:04:57 +0800</lastBuildDate><atom:link href="https://blog.hyperboly.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>State of MUN in Taiwan</title>
+      <link>https://blog.hyperboly.net/posts/rants/state-of-mun-in-taiwan/</link>
+      <pubDate>Sun, 26 Mar 2023 15:04:57 +0800</pubDate>
+      
+      <guid>https://blog.hyperboly.net/posts/rants/state-of-mun-in-taiwan/</guid>
+      <description>The bubble of MUN we live in.</description>
+    </item>
+    
     <item>
       <title>Music Consumption the Right Way</title>
       <link>https://blog.hyperboly.net/posts/guides/music-consumption-the-right-way/</link>
@@ -27,10 +36,10 @@
     
     <item>
       <title>Line</title>
-      <link>https://blog.hyperboly.net/posts/rant/line/</link>
+      <link>https://blog.hyperboly.net/posts/rants/line/</link>
       <pubDate>Mon, 20 Mar 2023 00:28:13 +0800</pubDate>
       
-      <guid>https://blog.hyperboly.net/posts/rant/line/</guid>
+      <guid>https://blog.hyperboly.net/posts/rants/line/</guid>
       <description>LINE is a terrible instant messaging app and no one should use it</description>
     </item>
     

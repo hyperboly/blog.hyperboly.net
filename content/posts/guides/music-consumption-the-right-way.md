@@ -62,7 +62,7 @@ Which directory would you like to download to (Ex. ~/Music/example)? # Enter in 
 ~/Music/all-my-songs
 
 Insert playlist URL you would like to download/update # Do not add quotes, just the URL will work
-%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLBVTuiShXIE7sDtTKaW4CygVLUEv7zNv2
+https://www.youtube.com/playlist?list=PLBVTuiShXIE7sDtTKaW4CygVLUEv7zNv2
 
 Downloading music from remote, please make sure test is the correct directory
 Continue?  [y/n]: # will only take "y" or "n" as input. "y" is yes and "n" is no
@@ -79,7 +79,7 @@ Syncthing. The answer is always syncthing.
 For Windows: https://docs.syncthing.net/intro/getting-started.html
 For Linux: https://apt.syncthing.net/ (unfortunately I can only find installation for apt, arch, and nix. Fedora users you are alone, sorry)
 For android: https://play.google.com/store/apps/details?id=com.github.catfriend1.syncthingandroid
-Sorry no iOS, not really sorry. You shouldn't be using Apple products anyways
+Sorry no iOS, not really sorry. You shouldn't be using Apple products anyways.
 
 Now it's just a matter of linking your devices together to recognize each other and share the device over. This process is simple.
 

@@ -6,7 +6,7 @@ author: John Wu
 summary: "Is the internet accelerating newer generations?"
 tags: ["rants"]
 ShowToc: true
-draft: true
+draft: false
 
 ---
 
@@ -113,10 +113,34 @@ Highschoolers and young kids see this and think that they are also participants 
 That's where you get kids on social media saying "I'm broke."
 **Of course you're broke you're a kid**.
 Very few people expect you to have a lot of money.
-The concept of being broke isn't even FOR kids in the first place, it's for bum college students and adults.
+The concept of being broke isn't even for kids in the first place, it's for bum college students and adults.
 
 Money has become warped by the internet and I think that's pretty dogwater.
 
 ## Is It a Bad Thing?
+Is accelerated maturity a bad thing?
+Yes, but sometimes not.
+
+I've already explained why the money part is almost always a bad thing for kids, but the politics is a little different.
+Sure, I don't like having kids root for things they don't understand or truly care about, but it is a good experience.
+I think that my time in the right wing rabbithole was good for me because one I got out, I had experience in distancing myself from what I'm into and see if it's really rational.
+The downside is that people who don't do this will forever be stuck in the political stuff and not be able to try to understand what the other side is saying.
+My solution was to tune it all out and go against both sides rather than compromise, but that's just because I'm a stupid contrarian.
+I think that the internet will force normal people to have to adapt and parent much stricter than before.
 
 ## Effective Parenting
+Disabling access to the internet is not effective because kids will inevitably be exposed to the internet and it's mature content (not just porn, also politics and stuff).
+This is why I propose what has been done for thousands of years yet have been lost because of the internet.
+Educating your child after exposure to the internet.
+A novel idea.
+Educate your kids that TikTok will rot their brains, Instagram will steal all their information and ruin their life, and not talking too much on the internet as to not incriminate themselves.
+A lot of this knowledge I had to learn through experiencing it first hand or go down large rabbitholes to truly grasp the dangers of the internet, but I think the new generation of internet raised parents need to teach their kids about this.
+
+The last thing is limiting access to the internet.
+Way too many things rot people's minds right now.
+After the death of television, a lot of kids shows are on YouTube and from Elsagate we know not to trust YouTube with kids.
+I think even though you can set up your own DNS, extensions, and everything else, the best thing to do is supervision.
+Give your kids internet freedom but under parental supervision.
+Don't let your 12 year old and under kids unrestricted access to YouTube, or even YouTube Kids.
+But unless they are watching something truly terrible, let your kids do what they want on the internet.
+Let them watch boring Minecraft Letsplays, 12 seasons of Teletubbies, or whatever entertainment there is that isn't going to rot your kids brains.

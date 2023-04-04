@@ -5,7 +5,7 @@ date: 2023-03-26T15:04:57+08:00
 author: John Wu
 summary: "The bubble of MUN we live in."
 ShowToc: true
-tags: ["rant"]
+tags: ["rants"]
 draft: false
 
 ---

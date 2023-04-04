@@ -123,7 +123,7 @@ Yes, but sometimes not.
 
 I've already explained why the money part is almost always a bad thing for kids, but the politics is a little different.
 Sure, I don't like having kids root for things they don't understand or truly care about, but it is a good experience.
-I think that my time in the right wing rabbithole was good for me because one I got out, I had experience in distancing myself from what I'm into and see if it's really rational.
+I think that my time in the right wing rabbithole was good for me because once I got out, I had experience in distancing myself from what I'm into and see if it's really rational.
 The downside is that people who don't do this will forever be stuck in the political stuff and not be able to try to understand what the other side is saying.
 My solution was to tune it all out and go against both sides rather than compromise, but that's just because I'm a stupid contrarian.
 I think that the internet will force normal people to have to adapt and parent much stricter than before.

@@ -195,3 +195,8 @@ shred /path/to/file
 Simple!
 
 There are many other things you can do to shred your data, but Luke Smith already covers it in his [video](https://www.youtube.com/watch?v=0WcrgvhO_mw).
+
+# Sources
+[Normie article, basic ideas](https://www.freecodecamp.org/news/file-systems-architecture-explained/)
+[Real docs from Linux about ext4](https://ext4.wiki.kernel.org/index.php/Ext4_Disk_Layout#The_Super_Block)
+[inode wiki article](https://en.wikipedia.org/wiki/Inode#Multi-named_files_and_hard_links)

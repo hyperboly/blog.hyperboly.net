@@ -4,6 +4,7 @@ title: "File Recovery"
 date: 2023-06-03T17:13:45+08:00
 author: John Wu
 summary: "Recovering and securely wiping disks"
+tags: ['guides', 'tech']
 ShowToc: true
 draft: false
 

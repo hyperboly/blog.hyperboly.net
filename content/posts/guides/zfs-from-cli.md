@@ -179,4 +179,4 @@ Due to my timeframe and skill, I can't do this myself and so I won't.
 Anyways, hope this helped.
 
 # Resources Used
-[Reddit thread on the last bit with zdb](https://www.reddit.com/r/zfs/comments/478wwd/comment/d0b73db/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=1&utm_content=share_button}
+[Reddit thread on the last bit with zdb](https://www.reddit.com/r/zfs/comments/478wwd/comment/d0b73db/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=1&utm_content=share_button)

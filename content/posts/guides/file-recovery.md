@@ -149,7 +149,7 @@ An inode is always paired with a block, or set of blocks.
 Inodes are where metadata about the file is stored, this metadata can include information on the links, number of blocks allocated to a file, permissions...
 
 A block group structure looks like this:
-```
+```markdown
 Block Group 1
 |
 +--Super Block
@@ -199,5 +199,7 @@ There are many other things you can do to shred your data, but Luke Smith alread
 
 # Sources
 [Normie article, basic ideas](https://www.freecodecamp.org/news/file-systems-architecture-explained/)
+
 [Real docs from Linux about ext4](https://ext4.wiki.kernel.org/index.php/Ext4_Disk_Layout#The_Super_Block)
+
 [inode wiki article](https://en.wikipedia.org/wiki/Inode#Multi-named_files_and_hard_links)

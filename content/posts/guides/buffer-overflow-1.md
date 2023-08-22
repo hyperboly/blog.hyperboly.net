@@ -4,8 +4,9 @@ title: "Buffer Overflow 1"
 date: 2023-08-22T19:48:58+08:00
 author: John Wu
 summary: "PicoCTF 2022's buffer overflow 1 writeup"
+tags: ["CTFs","guides","tech"]
 ShowToc: true
-draft: true
+draft: false
 
 ---
 

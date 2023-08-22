@@ -10,6 +10,11 @@ draft: false
 
 ---
 
+This was a pretty beginner challenge for pwn that took me 2 days to figure out :). Fun times.
+Going through multiple writeups and documentation to find how to do anything with binary exploitation tools is impossible.
+So, here is a condensed version of what I've learned in the hours I spent on this problem.
+All it takes is a little knowledge in reading x86, C, python, CPU registers, and some basic stack memory knowledge.
+
 ## Given Stuff
 
 Problem:
@@ -147,12 +152,16 @@ It basically creates a recognizable pattern that we can use to find where in the
 `r <<< <de-bruijn-sequences>` just means `run` the program, and input the de-bruijn-sequence.
 The register $eip is now laaa, so we just have to find the offset of "laaa" to find how many bytes we need to overflow the eip.
 
+The `cyclic -l` or `cyclic --lookup` command in pwndbg helps us locate the offset of a string or hex value.
+
 ```
 pwndbg> cyclic -l laaa
 Finding cyclic pattern of 4 bytes: b'laaa' (hex: 0x6c616161)
 Found at offset 44
 pwndbg>
 ```
+
+## Solve
 
 The pattern is at offset 44, so we can just append where `win` is in memory after 44 bytes which we know is at 0x080491f6.
 So to put that into a python script with pwntools:

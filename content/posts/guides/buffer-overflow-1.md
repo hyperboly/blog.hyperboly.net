@@ -82,6 +82,7 @@ int main(int argc, char **argv){
 ## Analysis
 Make the `vuln` file executable first: `chmod +x vuln`.
 Open the project in GDB for analyzing: `gdb vuln`.
+Create the fake flag locally: `echo "picoCTF{flag} > flag.txt"`.
 From the source code, we see that there is a function `win` that is never called by `main` or `vuln`.
 However, because it is still in the code and for the sake of the challenge, the program will still load `win` onto the stack.
 ```c

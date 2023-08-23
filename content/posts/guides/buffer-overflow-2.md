@@ -6,7 +6,7 @@ author: John Wu
 summary: "PicoCTF 2022's buffer overflow 2 writeup"
 tags: ["CTFs","guides","tech"]
 ShowToc: true
-draft: true
+draft: false
 
 ---
 

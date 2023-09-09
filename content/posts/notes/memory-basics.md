@@ -18,11 +18,11 @@ First, a basic definition of memory. Have you ever seen that long card in your c
 ## Memory Structure
 I will abstract a lot of the memory structure here, so read on knowing there will be inaccuracies. Think of memory as a building, each floor is a storage space, and a building only has so many floors. Each floor and groups of floors can have a different purpose, the basement is for parking, floor 1 is for the lobby, floor 2 is for a restaurant, and the rest are residential. Now think of the floors as space in memory. There are 3 main spaces in memory, the data, stack, and heap.
 #### Diagram of Memory
-| Memory Space | Description                     |
-|--------------|---------------------------------|
-| Data         | Is where "static" variables are |
-| Stack        | Is where "local" variables are  |
-| Heap         | Is where "buffers" exist        |
+| Memory Space | Description                         |
+|--------------|-------------------------------------|
+| Data         | Is where data that don't change are |
+| Stack        | Is where "local" variables are      |
+| Heap         | Is where manually allocated space is|
 #### The Data Memory Space
 The data space will not be used in many beginner pwn questions, I don't think I've ever encountered it. It also means that they don't get deleted once a function is finished, these variables persist until the program dies. This means that nothing in the data space should change while the program is running. This would be things that are hardcoded into the language in use. For example, in C, the MAX_INT and MIN_INT variables dictate how much memory an integer takes up. Global and static local variables are stored in the data memory space. These variables don't change during runtime, only from the source of the language or the program.
 #### The Stack Memory Space
@@ -32,7 +32,6 @@ Probably more important than variables in the stack are the pointer and addresse
 
 ![Visual representation of stack](/CTF-notes/mem-stack.jpg)
 
-The stack does NOT include the buffers, which is in the "heap."
 #### The Heap Memory Space
 The heap is, as mentioned, where the manually allocated buffers live. But what are buffers? Buffers are spaces in code that the programmer dictates. How is this different from declaring a variable in the stack? Stack variables can't be resized during runtime, but buffers can. If I create a array in C, like this: `int *p = malloc[100]`, I am dynamically assigning 404 bytes to the pointer `p` (0-100 integers, each int is 4 bytes). Confused? Me too! Stack variables have the life cycle of being declared, stored, and initialized during **runtime**. When the function ends, so do the variables in the stack.
 

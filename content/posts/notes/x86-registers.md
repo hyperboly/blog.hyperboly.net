@@ -19,7 +19,7 @@ Registers are tiny memory in your CPU.
 You've heard of RAM, or random access memory, but you probably haven't heard of registers.
 Registers are the fastest accessible memory spaces that your programs can access, but because they're so small they are reserved for special usecases.
 Your RAM could be used for cache, browser stuff, and your display server.
-These processes don't need to be the fastest thing in the world, but it does need to be faster than disk because no one's waiting 10 minutes for a browser to load (... snap).
+These processes don't need to be the fastest thing in the world, but it does need to be faster than disk because no one's waiting 10 minutes for a browser to load (... snap packages).
 So registers are reserved for specific things such as defining addresses on the stack, or saving a return address to return back to `main` because another function is occupying the stack frame.
 
 ## Architectures
@@ -35,6 +35,9 @@ The ending 2 characters does not change between x64 and x86, but the prefixes ch
 
 ### x86 Registers
 x86 registers as mentioned before are 32 bits, or 4 bytes.
+
+This image is a comparison of 32-bit registers and smaller registers.
+It also lists some registers (explained later).
 ![x86 registers compared to smaller ones](/CTF-notes/x86-registers.png)
 
 ## Reserved Registers

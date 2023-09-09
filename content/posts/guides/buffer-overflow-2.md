@@ -80,6 +80,9 @@ Looking through the source code, the most obvious thing is the `win` function.
 This time, inside the win function there's a condition for controlling arg1 and arg2 though.
 At first, I thought this meant controlling $edi and $esi, but later looking through the assembly I was wrong.
 Again, the `win` function isn't called from `main` or `vuln`, so we have to overflow the EIP and get there.
+
+*Future me* overflow the return pointer, not the eip.
+
 Run the program in GDB: `gdb vuln`.
 Find the `win` to use for later.
 

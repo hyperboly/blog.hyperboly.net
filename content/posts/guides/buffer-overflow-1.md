@@ -113,6 +113,8 @@ pwndbg>
 
 So `win` is located at 0x080491f6, and since this is a buffer overflow problem, we just have to set $eip to 0x080491f6.
 
+*Future me* apparently it's not overflowing the $eip, it's overflowing the return register ($eax I think).
+
 The vulnerability in the code is in the function `vuln`, because of the use of `gets()`.
 So lets find out the buffer size in order to overflow the stack.
 

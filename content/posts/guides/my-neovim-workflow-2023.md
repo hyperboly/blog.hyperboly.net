@@ -6,7 +6,7 @@ author: John Wu
 summary: "A guide on how I use neovim for programming, writing, and homework"
 tags: ['guides', 'tech']
 ShowToc: true
-draft: true
+draft: false
 
 ---
 

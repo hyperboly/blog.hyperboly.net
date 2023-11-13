@@ -448,6 +448,25 @@ ls.add_snippets('c', {
 })
 ```
 
+Your final configuration directory tree for neovim should look like this
+```text
+nvim
+├── init.lua
+└── lua
+    └── user
+        ├── init.lua
+        ├── lazy.lua
+        ├── plugins
+        │   ├── colorscheme.lua
+        │   ├── lsp.lua
+        │   ├── luasnip.lua
+        │   ├── telescope.lua
+        │   └── treesitter.lua
+        ├── remap.lua
+        ├── set.lua
+        └── snips.lua
+```
+
 Since I'm learning the C programming language, I only have 2 snippets in here.
 One that creates a `main` function while including <stdio.h> and a general function snippet.
 To use these, all we have to do is create a *.c file and type "main" in insert mode, then press ctrl + i.

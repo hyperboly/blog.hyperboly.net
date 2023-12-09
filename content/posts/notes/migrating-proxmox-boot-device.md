@@ -6,7 +6,7 @@ author: John Wu
 summary: "Notes on my migration of bootdrives on my Proxmox server"
 tags: ['tech']
 ShowToc: true
-draft: true
+draft: false
 
 ---
 

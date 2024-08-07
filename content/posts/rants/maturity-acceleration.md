@@ -6,7 +6,7 @@ author: John Wu
 summary: "Is the internet accelerating newer generations?"
 tags: ["rants"]
 ShowToc: true
-draft: false
+draft: true
 
 ---
 

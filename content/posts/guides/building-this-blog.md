@@ -101,7 +101,7 @@ Nice, you've set up a local website ready to deploy
 ## Setting Up Your Webserver: [landchad Tutorial](https://landchad.net/basic/)
 
 ### Get a Domain Name
-Domain names normally go for $10-11USD, but some websites will offer discounts such as [Epik](https://www.epik.com/) or [any one of these](https://www.icann.org/en/accredited-registrars). Pick a cool name for your website like toadnfriends.online or hyperboly.net and purchase it. I normally pick the cheapest one that looks legit to the average person. \*.net is pretty recognized and doesn't look suspicious.
+Domain names normally go for $10-11USD, but some websites will offer discounts such as [Epik](https://www.epik.com/) or [any one of these](https://www.icann.org/en/accredited-registrars). Pick a cool name for your website like hyperboly.net and purchase it. I normally pick the cheapest one that looks legit to the average person. \*.net is pretty recognized and doesn't look suspicious.
 
 ### Get a Server
 So now you need a server to link your domain to. I will show you how to do this using a VPS
@@ -141,6 +141,8 @@ server {
 ```
 
 Here, you'll have to change `name_of_website.com` and `/var/www/name_of_website` to your own domain name and website. Keep everything else the same and paste it into `/etc/nginx/sites-available/name_of_website`. Now you can create the directory for the website at `/var/www/name_of_website`, we'll populate the directory later with `rsync`: `mkdir /var/www/name_of_website`. To enable the site so people can actually access it, do `ln -s /etc/nginx/sites-available/name_of_website /etc/nginx/sites-enabled`. Reload nginx, and the website should be online. Wait a few minutes (sometimes hours) for the domain to update: `systemctl reload nginx`.
+
+> EDIT: Since 2024, I've switched to HAProxy
 
 #### Poking Holes in The VPS Firewall
 You'll have to open some ports on the host in order for people to access those ports, this is done with ufw.

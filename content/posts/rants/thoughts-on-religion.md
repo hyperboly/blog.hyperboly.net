@@ -6,7 +6,7 @@ author: John Wu
 summary: "My take on religion"
 tags: ["rants"]
 ShowToc: true
-draft: false
+draft: true
 
 ---
 

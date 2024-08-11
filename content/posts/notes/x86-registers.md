@@ -38,7 +38,7 @@ x86 registers as mentioned before are 32 bits, or 4 bytes.
 
 This image is a comparison of 32-bit registers and smaller registers.
 It also lists some registers (explained later).
-![x86 registers compared to smaller ones](/CTF-notes/x86-registers.png)
+![x86 registers compared to smaller ones](/images/CTF-notes/x86-registers.png)
 
 ## Reserved Registers
 Even with registers, there are some that are reserved for special register usecases, here are some.

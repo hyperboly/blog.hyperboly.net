@@ -51,7 +51,7 @@ The Address Register contains information about where the array of data needed i
 ### SP
 The Stack Pointer (SP) points to where the last item pushed onto the stack is. When an item is pushed onto a stack, the SP decrements. When an item is pulled from the stack, the SP increments.
 
-![Stack Visualization](/CTF-notes/mem-stack.jpg)
+![Stack Visualization](/images/CTF-notes/mem-stack.jpg)
 
 ## General Registers
 The above explanation is only a high level of registers, there is a lot more happening in the memory on a CPU. Note that registers for **64 bit** architecture computers are different from 32 bit registers. Registers will start with an "R" in 64 bit (RAX) unlike 32 bit registers that start with "E" (EAX).

@@ -16,7 +16,7 @@ This article is my experience of converting from standard Linux distros (I've us
 # Initial setup
 The worst part of NixOS is post installation and the first setup.
 The NixOS installer uses a legacy declarative system, `configuration.nix` and `hardware-configuration.nix`.
-While using `configration.nix` does work, it's not way most people do it now, and the majority of the time learning is from other people's configs.
+While using `configration.nix` does work, it's not the way most people do it now, and the majority of the time spent learning is from other people's configs.
 
 The modern way to write configurations for NixOS is using flakes.
 I still don't fully comprehend the concept of flakes, but here's my understanding:

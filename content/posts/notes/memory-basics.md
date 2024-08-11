@@ -13,7 +13,7 @@ Memory is essential to understand for pwning in CTFs. Here, I will try to explai
 
 ## Definition of Memory
 First, a basic definition of memory. Have you ever seen that long card in your computer with black squares on it? That's memory. Most people (who watch Linus Tech Tips) know this as Random Access Memory (RAM), but at the core it is just temporary storage on your computer. RAM is immediately wiped after rebooting your computer, but is much faster than writing onto your SSD or hard drive. Functions that require temporary and fast speeds would use RAM; this includes caching websites, displaying text in a GUI, and loading chunks in games.
-![RAM Stick](/CTF-notes/RAM-stick.jpg)
+![RAM Stick](/images/CTF-notes/RAM-stick.jpg)
 
 ## Memory Structure
 I will abstract a lot of the memory structure here, so read on knowing there will be inaccuracies. Think of memory as a building, each floor is a storage space, and a building only has so many floors. Each floor and groups of floors can have a different purpose, the basement is for parking, floor 1 is for the lobby, floor 2 is for a restaurant, and the rest are residential. Now think of the floors as space in memory. There are 3 main spaces in memory, the data, stack, and heap.
@@ -30,7 +30,7 @@ This is the part of memory that many beginner pwn questions will want you to att
 
 Probably more important than variables in the stack are the pointer and addresses in the stack. The stack pointer is not like pointers in C/C++. The stack pointer indicates where the program is while the program is running. This becomes very helpful while debugging. The Extended Instruction Pointer exists at the end of the stack execution, where it will look for the next instruction. This becomes useful when we do something called a "stack overflow," where you overflow the whole stack and enter in the malicious instruction onto the original instruction pointer space. Later articles will further explain the stack. Essentially, if you overflow the stack, you can control the instruction pointer or other registers if the program isn't secure.
 
-![Visual representation of stack](/CTF-notes/mem-stack.jpg)
+![Visual representation of stack](/images/CTF-notes/mem-stack.jpg)
 
 #### The Heap Memory Space
 The heap is, as mentioned, where the manually allocated buffers live. But what are buffers? Buffers are spaces in code that the programmer dictates. How is this different from declaring a variable in the stack? Stack variables can't be resized during runtime, but buffers can. If I create a array in C, like this: `int *p = malloc[100]`, I am dynamically assigning 404 bytes to the pointer `p` (0-100 integers, each int is 4 bytes). Confused? Me too! Stack variables have the life cycle of being declared, stored, and initialized during **runtime**. When the function ends, so do the variables in the stack.

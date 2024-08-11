@@ -12,6 +12,8 @@ draft: false
 
 For the non-Asians, [LINE](https://line.me/en/) is the Japanese version of WeChat or WhatsApp. So yeah, it's Japanese spyware that has spread to the majority of East Asia.
 
+![Line's very creative logo](/images/rants/LINE_logo.png)
+
 ## LINE Features
 - LINE Pay: Like Apple Pay but with LINE
 - Instant messaging: This was the original purpose of the app

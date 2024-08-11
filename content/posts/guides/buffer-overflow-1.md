@@ -1,14 +1,16 @@
 ---
 
-title: "Buffer Overflow 1"
+title: "PicoCTF - Buffer Overflow 1"
 date: 2023-08-22T19:48:58+08:00
 author: John Wu
-summary: "PicoCTF 2022's buffer overflow 1 writeup"
+description: "PicoCTF 2022's buffer overflow 1 writeup"
 tags: ["CTFs","guides","tech", "pwn"]
 ShowToc: true
 draft: false
 
 ---
+
+# PicoCTF 2022
 
 This was a pretty beginner challenge for pwn that took me 2 days to figure out :). Fun times.
 Going through multiple writeups and documentation to find how to do anything with binary exploitation tools is impossible.

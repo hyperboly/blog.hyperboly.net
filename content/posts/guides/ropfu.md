@@ -1,6 +1,6 @@
 ---
 
-title: "Ropfu"
+title: "PicoCTF - Ropfu"
 date: 2023-09-22T00:39:08+08:00
 author: John Wu
 summary: "Intro to ROP and my writeup for picoCTF 2022's ropfu"
@@ -8,6 +8,8 @@ tags: ["CTFs", "pwn", "tech", "guides"]
 ShowToc: true
 
 ---
+
+# PicoCTF 2022
 
 This challenge is a simple return oriented challenge, which means I spent 2 days trying to solve the challenge and looking through the solutions for more than 2 hours.
 Anyways, return oriented programming in x86.

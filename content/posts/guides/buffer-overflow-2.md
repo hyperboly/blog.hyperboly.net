@@ -1,14 +1,16 @@
 ---
 
-title: "Buffer Overflow 2"
+title: "PicoCTF - Buffer Overflow 2"
 date: 2023-08-23T13:13:04+08:00
 author: John Wu
-summary: "PicoCTF 2022's buffer overflow 2 writeup"
+description: "PicoCTF 2022's buffer overflow 2 writeup"
 tags: ["CTFs","guides","tech", "pwn"]
 ShowToc: true
 draft: false
 
 ---
+
+# PicoCTF 2022
 
 This challenge was a step up from buffer overflow 1 because you also had to control function call arguments.
 You pretty much only need to know everything from buffer overflow 1 and attach a little more logic, although it did take me another day to solve it.

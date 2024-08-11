@@ -4,7 +4,7 @@ description: "John Wu's writings about tech and stuff"
 ---
 <img
     id="me"
-    src="/images/me1.jpg"
+    src="/images/me.jpg"
     alt="A picture of me">
 
 # `$ whoami`

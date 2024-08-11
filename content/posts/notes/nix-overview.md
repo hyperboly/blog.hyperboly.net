@@ -5,6 +5,7 @@ date: 2024-08-09T10:12:06+08:00
 author: John Wu
 summary: An overview of NixOS and my experience switching over to it
 ShowToc: true
+tags: ['tech']
 draft: false
 
 ---

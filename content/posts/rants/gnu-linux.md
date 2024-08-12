@@ -5,7 +5,7 @@ date: 2023-04-04T18:57:55+08:00
 author: John Wu
 summary: "Short post on GNU+Linux"
 tags: ["tech"]
-ShowToc: true
+toc: false
 draft: false
 
 ---

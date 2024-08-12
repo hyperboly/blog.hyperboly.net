@@ -3,15 +3,15 @@
 title: "GPU passthrough for RX6600XT"
 date: 2022-06-07T18:09:07+08:00
 author: John Wu
-ShowToc: true
-summary: "A Comprehensive Guide on GPU Passthroughs in Proxmox for the RX6600XT GPU"
+toc: true
+description: "A Comprehensive Guide on GPU Passthroughs in Proxmox for the RX6600XT GPU"
 tags: ['tech', 'guides']
 
 ---
 
-## A Comprehensive Guide on GPU Passthroughs in Proxmox For the RX6600XT GPU
+# A Comprehensive Guide on GPU Passthroughs in Proxmox For the RX6600XT GPU
 
-## Some Prerequisites and Notes
+# Some Prerequisites and Notes
 
 This method of passing through my GPU works for:
 - Kernel: 5.15.30
@@ -31,18 +31,18 @@ In the BIOs for your host computer (where Proxmox is installed) settings, these 
 - AMD CBS:
 	- IOMMU: On
 
-## The Passthrough Process
+# The Passthrough Process
 
 This is the part of the process where everything is either done in an ssh session, on the host computer's shell, or the webGUI for proxmox.
 
-### Update Proxmox
+## Update Proxmox
 First make sure your Proxmox is updated with the correct repos. You can follow the [Proxmox docs](https://pve.proxmox.com/wiki/Package_Repositories#sysadmin_no_subscription_repo) for this.
 
 Next, you want to get your favorite text editor (Nano is preinstalled but I will use vim)
 
 > ``# apt-get install vim``
 
-### GRUB/Systemd Edits
+## GRUB/Systemd Edits
 
 For Systemd, every step will be the same, the only difference is you will edit `/etc/kernel/cmdline` for the GRUB flags, all flags will be the same.
 
@@ -58,7 +58,7 @@ update-grub works even if you are on systemd boot.
 
 After this, reboot.
 
-### Messing With Drivers
+## Messing With Drivers
 
 Check if you did everything correctly with
 
@@ -86,7 +86,7 @@ Now you update initramfs and reboot with:
 > ``update-initramfs -u``  
 ``reboot``
 
-### Isolating Your GPU
+## Isolating Your GPU
 
 Run ``lspci -nnk`` and find your GPU. My RX6600XT GPU shows up as:  
 > __0a:00.0__ VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 23 __[1002:73ff]__ (rev c1)
@@ -106,7 +106,7 @@ Now reboot again just in case.
 
 To check if you are using the correct kernel module for your GPU, do ``lspci -v`` and see if your GPU's kernel in use is vfio-pci or the line is just not there. If either is true, you're halfway there.
 
-### Black Magic Section
+## Black Magic Section
 
 Welcome to Black Magic, where nothing in the section makes sense to me.
 
@@ -128,7 +128,7 @@ Write and quit. Run ``chmod +x gpufix.sh``. Lastly, add to the cron entry.
 
 Reboot.
 
-### VM Creation
+## VM Creation
 
 If the settings are not mentioned in this segment, leave them as default. Go into the web GUI for Proxmox and click on create VM. I used a Windows 11 VM with VirtIO drivers (get the ISOs from [Windows officially](https://www.microsoft.com/software-download/windows11/) and [Redhat unofficially](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/?C=M;O=D)).  
 The following segment are settings ___needed___ for this to work:
@@ -149,7 +149,7 @@ The following segment are settings ___needed___ for this to work:
 
 After you have created the VM, go into the hardware settings and add an ISO image. This ISO image would be the Virt-IO drivers that you downloaded before. In the options tab in the VM under hardware check the Boot Order. The Boot Order should be your 50GB (or what you set it) hard disk first, your Windows ISO (in ide), net0, and lastly the Virt-IO drivers (ide).
 
-### Windows 11 Installation
+## Windows 11 Installation
 
 First, be prepared for the pain and suffering Windows 11 installation can be. Linux is years ahead with the installation with the live USB thing, why can't Microsoft catch up? Anyways, you'll apply the virt-IO drivers here.
 
@@ -166,31 +166,31 @@ First, be prepared for the pain and suffering Windows 11 installation can be. Li
 10. While installing, you might notice your host machine's monitor start displaying Windows but your mouse and keyboard may not be able to do anything. Reboot and follow the next section.
 11. Finally, tick the primary GPU option in your GPU options.
 
-### Finishing Touches
+## Finishing Touches
 
 By now, you are already set to go, except that you can't do anything with your keyboard and mouse. To fix this, shutdown the VM once more and go to hardware settings in the Proxmox web GUI. Add USB devices and passthrough every port with your keyboard, mouse, whatever else you want. Now, you are truly done. Start up your VM and enjoy being exploited by Windows.
 
-## External Links
+# External Links
 
 If you continue to struggle with GPU passthrough, here are all the articles I went through to find my solution.
 
-1. #### Documentation
+1. **Documentation**
 
 	1. [Proxmox Docs](https://pve.proxmox.com/wiki/Pci_passthrough)
 	2. [Arch Wiki](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF)
 	3. [Debian Docs](https://wiki.debian.org/AtiHowTo)
 
-2. #### Unofficial Guides
+2. **Unofficial Guides**
 	1. [Reddit Ultimate Guide (outdated)]( Passthroug://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
 	2. [Reddit 2 Min Guide (outdated)](https://www.reddit.com/r/Proxmox/comments/lcnn5w/proxmox_pcie_passthrough_in_2_minutes/)
 	3. [Tutorial From Proxmox Forums RX6600XT Specific (didn't work for me)](https://forum.proxmox.com/threads/gpu-passthrough-radeon-6800xt-and-beyond.86932/)
 	4. [Dumping V-BIOs Blog](https://blog.quindorian.org/2018/03/building-a-2u-amd-ryzen-server-proxmox-gpu-passthrough.html/)
 
-3. #### Forums
-	1. [Black Magic](https://forum.proxmox.com/threads/problem-with-gpu-passthrough.55918/page-2)
-	2. [Radeon RX6600 Specific Post on Reddit](https://www.reddit.com/r/VFIO/comments/p30r0c/6600xt_passthrough/)
-	3. [Dumping V-BIOs Thread](https://forum.level1techs.com/t/replaced-radeon-pro-with-radeon-rx-6600xt-on-proxmox-and-now-getting-code43/180419)
+3. **Forums**
+    1. [Black Magic](https://forum.proxmox.com/threads/problem-with-gpu-passthrough.55918/page-2)
+    2. [Radeon RX6600 Specific Post on Reddit](https://www.reddit.com/r/VFIO/comments/p30r0c/6600xt_passthrough/)
+    3. [Dumping V-BIOs Thread](https://forum.level1techs.com/t/replaced-radeon-pro-with-radeon-rx-6600xt-on-proxmox-and-now-getting-code43/180419)
 
-## Support This Guide
+# Support This Guide
 
 If you have any other GPU's that you got working whether absurdly like me or even normally, consider making a pull request for it or submitting an issue on the [github](https://github.com/hyperboly/techsite)!

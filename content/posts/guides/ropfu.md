@@ -3,9 +3,9 @@
 title: "PicoCTF - Ropfu"
 date: 2023-09-22T00:39:08+08:00
 author: John Wu
-summary: "Intro to ROP and my writeup for picoCTF 2022's ropfu"
+description: "Intro to ROP and my writeup for picoCTF 2022's ropfu"
 tags: ["CTFs", "pwn", "tech", "guides"]
-ShowToc: true
+toc: true
 
 ---
 

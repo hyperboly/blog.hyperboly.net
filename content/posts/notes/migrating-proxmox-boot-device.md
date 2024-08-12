@@ -3,9 +3,9 @@
 title: "Migrating Proxmox Boot Device"
 date: 2023-12-02T12:06:48+08:00
 author: John Wu
-summary: "Notes on my migration of bootdrives on my Proxmox server"
+description: "Notes on my migration of bootdrives on my Proxmox server"
 tags: ['tech']
-ShowToc: true
+toc: true
 draft: false
 
 ---

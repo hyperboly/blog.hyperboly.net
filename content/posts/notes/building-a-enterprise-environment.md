@@ -3,27 +3,27 @@
 title: "My Own Enterprise Environment"
 date: 2023-09-09T19:16:24+08:00
 author: John Wu
-summary: "A look at the progress in my homeserver and some historical notes."
+description: "A look at the progress in my homeserver and some historical notes."
 tags: ['tech']
-ShowToc: true
+toc: true
 draft: false
 
 ---
 
 I'm ready to put on a suit and tie, sit in a cubicle, and fantasize about being productive.
 
-## The History of This Setup
+# The History of This Setup
 My homeserver according to how long my current install of Proxmox was started on June 9th, 2022.
 I used Linux as a desktop for a couple of months before that and ran a shoddy Ubuntu server for a month before.
 So, it's now September of 2023 and my homeserver has evolved since then, which is why I'm documenting it's progress.
 
-## Current Homeserver
-### Physical Servers
+# Current Homeserver
+## Physical Servers
 I have 2 towers for this homeserver, one is pretty decked out the other not so much.
 I won't touch on the specific hardware because I'll have to dig for a list I lost a long time ago.
 The only hardware I'm sure of is the GPU in Proxmox, which I go much in depth of what I do with it in [this article](/posts/guides/gpupassthroughamd6600).
 
-#### Proxmox (PVE)
+### Proxmox (PVE)
 The physical server for this homeserver hasn't changed in a year, although I'm planning to get 2 NVME's soon for a RAID1 reinstall of proxmox.
 The one thing that did change in PVE is the GPU, which I removed and am waiting on a replacement GPU.
 I removed the GPU because I didn't really need a desktop workstation and didn't play many games, and the stuff I do I just need my laptop.
@@ -36,7 +36,7 @@ Throwing in the NAS, I have it virtualized under PVE but passed through the indi
 I sort of regret it but sort of not.
 The main thing I regret is not labelling the drives' UUID for when they inevitably die on me.
 
-#### OPNsense
+### OPNsense
 For OPNsense, I'm running some generation of an i3 and the boot disk is some spare SSD picked out from the dump.
 This computer was mainly just picked up from a dump, I live near a university and their 3C hardware just gets renewed every couple of years I guess.
 It runs well on 8G of RAM and hasn't died on me yet, though I doubt it's stability especially with the shoddy SSD.
@@ -45,7 +45,7 @@ OPNsense only came in after I realized I needed VLANs in my network when I start
 Just the awareness of things bots do on the internet and some of the stories scared me into improving security in my homeserver.
 If only by a little.
 
-#### Networking Devices
+### Networking Devices
 I have only 3 networking devices that really matter outside of OPNsense: my Zyxel switch, netgear switch, and netgear AP.
 All of them are gigabit connection, which is fine, despite what some people would say.
 For most workloads, I can wait for a file transfer a little longer than if I had 2.5, though it would be nice :)
@@ -60,7 +60,7 @@ I got this switch early in my homeserver because the AP at the time didn't have 
 The netgear AP (WAX610) is pretty cool because it has WiFi 6, even though all my devices can't connect to it my family's Apple devices can, which is cool.
 It's also the newest hardware for my homeserver, when I got it around June because the original D-Link trash couldn't have more than 1 SSID.
 
-### Virtual Insanity
+## Virtual Insanity
 Of course, being a proxmox user, I enjoy virtualization and the ease that PVE gives me to do it.
 Unfortunately, this is not a enterprise hypervisor solution from what I've seen online; especially in Taiwan because most companies are using Hyper-V as their type 1 hypervisor solution.
 I've been wanting to get into Windows but Linux is what I'm comfortable with and it's hard to motivate myself to touch something I deem as unethical.
@@ -78,9 +78,9 @@ I don't trust docker too much because of the historical vulnerabilities proving 
 Despite all the conveniences Docker brings, if the devs don't update the packages regularly in the container, even if you run all the best practices on Docker you can still have a high chance of being compromised.
 I run it in a VM because it means it needs to break out of the Docker and then out of the VM, which is unlikely in my threat model.
 
-## Security
+# Security
 
-### Threat Model
+## Threat Model
 The main threat I perceive in my network are bots from Shodan or some script kiddies looking for an easy metasploit target.
 Stories I've heard from Darknet Diaries such as WannaCry has me scared straight.
 When a rogue government sponsored virus goes loose, there's nothing I can really do about it because most likely they're using a 0day exploit.
@@ -106,7 +106,7 @@ First from the outside and then from the inside, see what I can exploit as an id
 
 There are obviously many steps I still have to make to have this homeserver tighter in security, but for now I have most of the elements of a small size enterprise.
 
-## Is It Enterprise Enough?
+# Is It Enterprise Enough?
 Over the past year of doing homeserver stuff and learning enterprise procedures through certification books, no, it's not enterprise enough.
 This is not enterprise enough.
 I'm sure anyone skilled in offensive cybersecurity could break into my servers easily, as I'm also sure any defensive security professional would look at my setup and point out a million flaws.

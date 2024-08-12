@@ -3,9 +3,9 @@
 title: "Thoughts on Religion"
 date: 2023-03-31T20:04:28+08:00
 author: John Wu
-summary: "My take on religion"
+description: "My take on religion"
 tags: ["rants"]
-ShowToc: true
+toc: true
 draft: true
 
 ---

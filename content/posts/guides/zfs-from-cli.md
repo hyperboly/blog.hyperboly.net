@@ -3,9 +3,9 @@
 title: "ZFS From CLI and ZFS File Recovery"
 date: 2023-06-07T21:30:32+08:00
 author: John Wu
-summary: "A continuation of file recovery, but with ZFS and some basic commands that I learned on the way [SPOILER: I FAILED]."
+description: "A continuation of file recovery, but with ZFS and some basic commands that I learned on the way [SPOILER: I FAILED]."
 tags: ['guides', 'tech']
-ShowToc: true
+toc: true
 draft: false
 
 ---
@@ -17,7 +17,7 @@ Find installation instructions from the [arch wiki](https://wiki.archlinux.org/t
 
 Note I'll be writing these notes while doing the actual testing, so bear with the troubleshooting.
 
-## Creating a Pool
+# Creating a Pool
 Make sure the drives you want to create a ZFS pool on is empty of any partitioning schemes first.
 ```bash
 wipefs -a /dev/sdX
@@ -44,7 +44,7 @@ Now, you can start moving your storage around. Without caring about permissions,
 chown -Rfv $USER:$USER /pool1/dsX
 ```
 
-## Setting Up Pool For Testing
+# Setting Up Pool For Testing
 Since I'm using this to test for file recovery, I'll put a few binaries and text files in to see what happens and then use testdisk to try and recover them.
 ```bash
 cp -v /usr/bin/ls /pool1/ds1
@@ -58,7 +58,7 @@ mv testfile2 /pool1/ds2
 cp -v /usr/bin/whoami /pool1/ds2
 ```
 
-## Deleting Files and Initial Theories
+# Deleting Files and Initial Theories
 I think that because ZFS has redundancy, what you do to the drive with the active data would get erased, but still recoverable from tools like testdisk.
 I'm not sure if ZFS uses a git-like thing where you can just reset back to a previous save.
 From what I understand, ZFS is not built to recover deleted files, but to prevent FS corruption from dead drives.
@@ -89,7 +89,7 @@ zfs list # make sure it's gone
 
 Now I'll shutdown the VM and test individual drives on my laptop. Bravo 6, going dark.
 
-## File Recovery
+# File Recovery
 The process for ZFS was much harder and takes longer than for ext4. No wonder professionals get paid so much.
 
 Using `testdisk` to analyze the ZFS pool, the tool under the "Advanced" tab does not allow you to use "Undelete" unlike ext4.
@@ -137,7 +137,7 @@ After exporting, I ran `zdb -ul /dev/sdb1` to find the uberblocks (superblocks i
 This gives me a general idea of when uberblocks were created and the specific timing.
 I have no clue which second I deleted the different files.
 
-### Luck Based Recovery
+## Luck Based Recovery
 Are you a gambler? Are you in need of recovering your ZFS pool because you didn't set snapshots and backups??? Perfect!
 Let's recover a snapshot from the uberblocks using `zdb`.
 

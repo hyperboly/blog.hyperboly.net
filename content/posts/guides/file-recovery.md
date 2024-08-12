@@ -3,17 +3,17 @@
 title: "File Recovery"
 date: 2023-06-03T17:13:45+08:00
 author: John Wu
-summary: "Recovering and securely wiping disks"
+description: "Recovering and securely wiping disks"
 tags: ['guides', 'tech']
-ShowToc: true
+toc: true
 draft: false
 
 ---
 
-## Guide on File Recovery
+# Guide on File Recovery
 Recently I've been drafted into a science fair for our school, so here's our project. It's an experiment on file recovery. The goal was originally to see how to fully destroy a file. We achieved this on the first day with the command `shred`. Here's Luke Smith to explain it ([video](https://www.youtube.com/watch?v=0WcrgvhO_mw)).
 
-## Formatting NTFS, EXT4, and FAT32
+# Formatting NTFS, EXT4, and FAT32
 Since we are testing this on a USB to not destroy all the data on my actual drive while testing, we need to wipe the USB first and start over with different filesystem types. This is just for testing different FSes.
 ```
 mkfs.ntfs /dev/sda
@@ -27,7 +27,7 @@ mkfs.ext4 /dev/sda
 mkfs.fat -F32 /dev/sda
 ```
 
-## Mounting The Drive
+# Mounting The Drive
 Now, we need to mount the drives, create and delete a few files for testing.
 
 `/dev/sda` is the drive name
@@ -122,7 +122,7 @@ swayimg larbs.png # Since I use wayland now, this is my image viewer. Use your o
 cat testDirFile
 ```
 
-## *Nuances*
+# *Nuances*
 I used a big word! Do you think I'm smart now???
 
 In my tests, I did not test for btrfs, zfs, or any of the enterprise level filesystems because I did not have redundant drives nor the motivation to format my USB with btrfs/zfs, create different snapshots & mountpoints just to simulate real world enterprise NAS systems.

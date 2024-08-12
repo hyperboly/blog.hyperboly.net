@@ -6,6 +6,7 @@ author: John Wu
 description: A new and updated version of how I use neovim on a daily basis
 tags: ['tech', 'guides']
 draft: false
+toc: true
 
 ---
 
@@ -198,3 +199,8 @@ I think I will continue to use Yazi, but not in my normal workflow and only when
 
 ## How it looks like when writing
 ![Image of my desktop writing this blog](/images/guides/workflow.png)
+
+# Further reading/videos
+- [vimjoyer's video](https://www.youtube.com/watch?v=YZAnJ0rwREA)
+- [home-manager docs](https://nix-community.github.io/home-manager/)
+- [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)

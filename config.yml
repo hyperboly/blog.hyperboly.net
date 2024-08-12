@@ -20,6 +20,10 @@ markup:
     noClasses: true
     style: catppuccin-frappe
     tabWidth: 4
+  tableOfContents:
+    startLevel: 1
+    endLevel: 3
+    ordered: true
 
 permalinks:
   post: "/post/:year/:month/:day/:slug/"

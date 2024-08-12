@@ -5,7 +5,7 @@ date: 2023-08-23T13:13:04+08:00
 author: John Wu
 description: "PicoCTF 2022's buffer overflow 2 writeup"
 tags: ["CTFs","guides","tech", "pwn"]
-ShowToc: true
+toc: true
 draft: false
 
 ---

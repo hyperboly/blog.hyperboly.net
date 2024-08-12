@@ -4,7 +4,7 @@ title: "Music Consumption the Right Way"
 date: 2023-03-24T21:21:08+08:00
 author: John Wu
 description: "Learn how I get adless, downloaded, high enough quality music all for free."
-TocShow: true
+toc: true
 tags: ["guides", "tech"]
 draft: false
 
@@ -12,19 +12,19 @@ draft: false
 
 I got tired of Spotify stealing my information, showing me ads, and draining my mobile data usage. So I downloaded free music from Youtube.
 
-## Tools
-### Downloading Music
+# Tools
+## Downloading Music
 `yt-dlp`:
 - A fork of `youtube-dl`, but uses aria2 and bypasses a lot of DRM, and is generally better I think
 - Will be used for downloading songs, playlists...
-### Syncing Music
+## Syncing Music
 `syncthing`:
 - One of the greatest tool for syncthing files, not just music
 - Easy webUI, configuration, and usage
 - Very similar to rsync except it doesn't use `ssh` and is more "user friendly" if you don't like CLI
 
-## `yt-dlp`
-### Manual Usage
+# `yt-dlp`
+## Manual Usage
 You can manually download videos/audio from Youtube just with yt-dlp alone. The most basic usage is `yt-dlp "https://youtube.com/watch?=v..."`, which will download the video and audio in the default formats and quality.
 
 This is not what you're here for though, you want to know how to use this tool like an ultra chad music listener, so here is the command:
@@ -40,12 +40,12 @@ It's definitely not pretty, so let's go through each argument (also see `man yt-
 - `-o "%(title)s.%(ext)s"`: specifying output file name. Or, what the download file name will be called. In this case, the title string with the file extension (specified as opus from `-x --audio-format`)
 - The youtube link is my own playlist, you can replace it with your own. Just make sure it's in quotes "".
 
-### My Script
+## My Script
 The manual way definitely works, but it's slow; plus, you have to redownload your playlist again if you want to add more songs to your playlist.
 Introducing my script `ytpl-update`, found [here](https://github.com/hyperboly/dotfiles/blob/main/.local/bin/ytpl-update).
 This script only works on linux, but you can probably use wsl2 and it will work. The script checks if you have yt-dlp installed to the latest version, asks for where you want to download the music, and asks for your music playlist link before downloading the playlist. When you use this script, it creates a file that keeps track of **only songs that were explicitly downloaded**, and will check the file to know if a song needs to be updated. So when you download your whole playlist, add a few songs to it, the script will not redownload your whole playlist again.
 
-#### Usage
+### Usage
 Because this script was not designed with the UNIX philosophy in mind and more "user friendly," there are no supported arguments. I may add them in the future.
 I will run through a basic example of how to use it, although the prompts should make it clear already.
 
@@ -71,11 +71,11 @@ y
 # Downloading will start now, wait until the download process is finished and you are gold
 ```
 
-## Syncthing
+# Syncthing
 How will I get all this music from my Linux laptop to my phone? How will the files be automatically synced together when I add or delete files?
 Syncthing. The answer is always syncthing.
 
-### Installation
+## Installation
 For Windows: https://docs.syncthing.net/intro/getting-started.html
 For Linux: https://apt.syncthing.net/ (unfortunately I can only find installation for apt, arch, and nix. Fedora users you are alone, sorry)
 For android: https://play.google.com/store/apps/details?id=com.github.catfriend1.syncthingandroid
@@ -83,22 +83,22 @@ Sorry no iOS, not really sorry. You shouldn't be using Apple products anyways.
 
 Now it's just a matter of linking your devices together to recognize each other and share the device over. This process is simple.
 
-### Connect Your Devices
+## Connect Your Devices
 
-#### On Linux
+### On Linux
 Once installed from Ubuntu or Debian, the daemon should be already created.
 ```bash
 systemctl --user enable --now syncthing.service
 ```
 This will enable sycnthing at startup and you can go to [http://127.0.0.1:8384](http://127.0.0.1:8384) to access the syncthing webUI
 
-#### On Windows
+### On Windows
 I haven't used syncthing on Windows, but you can check [this video](https://www.youtube.com/watch?v=02XeIATCDO4).
 
-#### On Android
+### On Android
 The service should be automatically started once you access the app and check the start conditions
 
-#### In the webUI
+### In the webUI
 [Video form](https://www.youtube.com/watch?v=02XeIATCDO4)
 
 Now that your services are setup, you want to link them. Head to [http://127.0.0.1:8384](http://127.0.0.1:8384).
@@ -121,7 +121,7 @@ Select "Sharing" in blue text and tick the checkbox for your phone's name that y
 Now your phone should have a notification to confirm sharing the folder, confirm it and set where you want the download to go.
 The syncing should start now and you are basically finished.
 
-## What Now?
+# What Now?
 Android has a terrible default music player, I suggest you use Vinyl from fdroid if you want a better experience.
 
 You can use syncthing for things other than music, on as many devices as you want.

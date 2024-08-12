@@ -1,3 +1,7 @@
+:root {
+  color-scheme: light dark;
+}
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
@@ -154,49 +158,56 @@ header .current a {
 
 /* Code Boxes */
 pre {
-  border: 2px solid #EBC3DB;
-  padding: 1em;
-  overflow-x: auto;
+    border: 2px solid #EBC3DB;
+    padding: 1em;
+    overflow-x: auto;
 }
 pre code { background: none; }
 
+code {
+    background-color: light-dark(#D6D6D6, #888);
+    border-radius: 3px;
+    padding: 0.2em;
+    overflow-x: auto;
+}
+
 /* Images, tables, misc. */
 img, iframe, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 main {
-  hyphens: auto;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.7em;
-  hyphens: auto;
-  display: block;
-  font-size: 1.1em;
+    hyphens: auto;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7em;
+    hyphens: auto;
+    display: block;
+    font-size: 1.1em;
 }
 main a {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 blockquote {
 
-  border-left: 5px solid #ccc;
-  padding: 3px 1em 3px;
+    border-left: 5px solid #ccc;
+    padding: 3px 1em 3px;
 }
 
 .content-wrapper {
-  padding: 0px 12px 0px 12px;
+    padding: 0px 12px 0px 12px;
 }
 #me {
-  min-width: 40px;
-  float: right;
-  padding: 10px;
-  display: block;
+    min-width: 40px;
+    float: right;
+    padding: 10px;
+    display: block;
 }
 
 
@@ -205,12 +216,12 @@ blockquote {
 
 /* Small devices, phones */
 @media only screen and (min-width : 480px) {
-  #me {
-    min-width: 40px;
-    float: center;
-    padding: 10px 10px 10px 20px;
-    display: block;
-  }
+    #me {
+        min-width: 40px;
+        float: center;
+        padding: 10px 10px 10px 20px;
+        display: block;
+    }
 
 }
 
@@ -221,7 +232,7 @@ blockquote {
         top: 50%; /* 上边距为50% */
         right: 15px; /* 右边距为0，将其放在右侧 */
         transform: translateY(-50%); /* 使用transform来垂直居中 */
-        background-color: #393E41; /* 设置背景颜色 */
+        background-color: light-dark(#eee, #393E41); /* 设置背景颜色 */
         padding: 10px; /* 添加一些内边距以增加可读性 */
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
         width: 250px; /* 设置宽度 */

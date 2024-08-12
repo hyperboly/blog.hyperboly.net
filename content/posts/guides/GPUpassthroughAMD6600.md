@@ -182,8 +182,8 @@ If you continue to struggle with GPU passthrough, here are all the articles I we
 
 2. **Unofficial Guides**
 	1. [Reddit Ultimate Guide (outdated)]( Passthroug://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
-	2. [Reddit 2 Min Guide (outdated)](https://www.reddit.com/r/Proxmox/comments/lcnn5w/proxmox_pcie_passthrough_in_2_minutes/)
-	3. [Tutorial From Proxmox Forums RX6600XT Specific (didn't work for me)](https://forum.proxmox.com/threads/gpu-passthrough-radeon-6800xt-and-beyond.86932/)
+    2. [Reddit 2 Min Guide (outdated)](https://www.reddit.com/r/Proxmox/comments/lcnn5w/proxmox_pcie_passthrough_in_2_minutes/)
+    3. [Tutorial From Proxmox Forums RX6600XT Specific (didn't work for me)](https://forum.proxmox.com/threads/gpu-passthrough-radeon-6800xt-and-beyond.86932/)
 	4. [Dumping V-BIOs Blog](https://blog.quindorian.org/2018/03/building-a-2u-amd-ryzen-server-proxmox-gpu-passthrough.html/)
 
 3. **Forums**

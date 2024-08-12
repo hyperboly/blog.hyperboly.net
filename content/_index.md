@@ -4,7 +4,7 @@ description: "John Wu's writings about tech and stuff"
 ---
 <img
     id="me"
-    src="/images/me.jpg"
+    src="/images/me.webp"
     alt="A picture of me">
 
 # Hi

@@ -5,7 +5,7 @@ date: 2024-08-12T05:22:47+08:00
 author: John Wu
 description: A new and updated version of how I use neovim on a daily basis
 tags: ['tech', 'guides']
-draft: true
+draft: false
 
 ---
 

@@ -66,5 +66,7 @@ Base registers are registers for storing where a stack is in memory. Changing (a
 
 # Sources and Further Reading
 [Cool presentation](http://www.ee.nmt.edu/~erives/308L_05/The_stack.pdf)
+
 [tutorialspoint.com](https://www.tutorialspoint.com/what-is-memory-stack-in-computer-architecture)
+
 [pico primer](https://primer.picoctf.org/#_general_registers)

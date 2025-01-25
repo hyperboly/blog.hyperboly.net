@@ -3,18 +3,20 @@
 title: "Primitive Ansible"
 date: 2025-01-25T12:50:30+08:00
 author: John Wu
-description:
+description: Notes on my primitive ansible setup
 tags: ['Tech']
 toc: true
-draft: true
+draft: false
 
 ---
 
 I've been using ansible for maybe half a year now and I think the workflow I've got with it is pretty mature for the scale usecase that I have.
+Though I call it primitive because it only uses about 1% of what ansible offers.
 For those that don't know, [ansible](https://ansible.com) is a RedHat tool that automates things that traditionally I would use a shell script for.
 Some usecases include installing packages, updating, or changing locales on new systems.
 
 This is not a guide, just a few notes for ansible that I find useful.
+My setup is really primitive so writing a guide would only be useful as a starting point.
 
 # File Structure
 For some reason, [ansible documentation](https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html#directory-layout) for the filestructure is quite lacking and I had to read it a million times to do some basic stuff.

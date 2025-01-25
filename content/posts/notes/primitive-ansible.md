@@ -89,7 +89,7 @@ Everything on my server is completely local on my laptop (and backed up to my se
 In my inventory, I have a `host_vars` directory and under it are a bunch of directories with their respective *hostnames*.
 The hostnames part is important because that's how ansible know's which variable is for what.
 Under each hostname directory, for example `app/`, there are 2 files: 1 encrypted 1 plaintext.
-In the plain text file I would write `ansible_become_pass: "{{ vault_app_pass }}"``.
+In the plain text file I would write `ansible_become_pass: "{{ vault_app_pass }}"`.
 In the encrypted file I would write `vault_app_pass: "verycoolpassword"`.
 
 This makes it so that I have to unlock the encrypted file during execution so that the `app_plain.yml` file can read the encrypted variable otherwise it will error out.
@@ -102,3 +102,10 @@ With the way that I use ansible, there are several prerequisites required before
 2. There must be a root AND normal user (UID 1000 GID 1000) with passwords.
 3. There needs to be an sshd server running on the client.
 4. This is not OS agnostic so the OS must be debian (maybe Ubuntu), otherwise you'll need to patch it other distro specific stuff like the package manager.
+
+Some of these steps I automate with cloudinit or I have an LXC template that has 90% of this set up.
+The most tedious part is setting a password on the server and adding that to the inventory.
+
+
+That's about it for all the less documented stuff that I want to take a note of.
+Writing the playbooks is the easiest part because it's also the most documented, most of what I wanted to do have already been done.

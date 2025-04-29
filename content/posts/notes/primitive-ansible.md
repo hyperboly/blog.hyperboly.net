@@ -10,7 +10,7 @@ draft: false
 
 ---
 
-I've been using ansible for maybe half a year now and I think the workflow I've got with it is pretty mature for the scale usecase that I have.
+I've been using ansible for maybe half a year now and I think the workflow I've got with it is pretty mature for the scale and usecase that I have.
 Though I call it primitive because it only uses about 1% of what ansible offers.
 For those that don't know, [ansible](https://ansible.com) is a RedHat tool that automates things that traditionally I would use a shell script for.
 Some usecases include installing packages, updating, or changing locales on new systems.

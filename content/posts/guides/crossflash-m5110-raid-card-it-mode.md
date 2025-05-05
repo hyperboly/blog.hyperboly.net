@@ -112,3 +112,14 @@ If Firmware Product ID says `(IT)` then you're good.
 18. For the last time, reboot and go into Linux or back to Windows.
 
 # Good luck!
+
+# Thanks To
+[lazymocha](https://lazymocha.com/blog/2020/06/05/cross-flash-ibm-servraid-m5110-and-h1110-to-it-hba-mode/): For the guide and files.
+
+[kyletsenior](https://forums.servethehome.com/index.php?threads/some-additions-to-the-m5110-it-mode-flash-guide.39649/): For the extra information on lazymocha's guide.
+
+[blanchet](https://www.truenas.com/community/threads/checking-if-my-lsi-hba-is-in-it-mode.92164/): For explaining how to check if the card is in RAID or IT mode.
+
+[sergei](https://sergei.nz/cross-flash-m10159420-8i-lsi-controller-quasi-official-way/): For explaining the flashing process so that a Linux user can understand better.
+
+^ the links above are all blog pages and forums that I found helpful.

@@ -3,10 +3,10 @@ title: "home"
 description: "John Wu's writings about tech and stuff"
 ---
 
-[comment]: <> ( <img)
-[comment]: <> (     id="me")
-[comment]: <> (     src="/images/me.webp")
-[comment]: <> (     alt="A picture of me">)
+<img
+    id="me"
+    src="/images/me.webp"
+    alt="A picture of me">
 
 # Hi
 My name is John Wu, a university student interested in most technologies.

@@ -4,9 +4,9 @@ title: "Migrating ISC DHCP to Dnsmasq in OPNsense"
 date: 2025-08-08T17:54:33+08:00
 author: John Wu
 description:
-tags: ['tech', ]
+tags: ['tech', 'guides']
 toc: true
-draft: true
+draft: false
 
 ---
 

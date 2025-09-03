@@ -4,7 +4,7 @@ title: "Maturity Acceleration"
 date: 2023-04-04T10:53:21+08:00
 author: John Wu
 description: "Is the internet accelerating newer generations?"
-tags: ["rants"]
+tags: ["ramblings"]
 toc: true
 draft: true
 

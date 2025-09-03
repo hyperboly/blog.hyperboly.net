@@ -3,7 +3,7 @@
 title: "Line"
 date: 2023-03-20T00:28:13+08:00
 author: John Wu
-tags: ['tech','rants']
+tags: ['tech','ramblings']
 description: "LINE is a terrible instant messaging app and no one should use it"
 toc: true
 draft: false
@@ -12,7 +12,7 @@ draft: false
 
 For the non-Asians, [LINE](https://line.me/en/) is the Japanese version of WeChat or WhatsApp. So yeah, it's Japanese spyware that has spread to the majority of East Asia.
 
-![Line's very creative logo](/images/rants/LINE_logo.png)
+![Line's very creative logo](/images/ramblings/LINE_logo.png)
 
 # LINE Features
 - LINE Pay: Like Apple Pay but with LINE

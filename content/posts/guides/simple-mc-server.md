@@ -12,7 +12,6 @@ draft: false
 
 # Goal
 The goal of this guide is to get you a Debian system installed with a Paper Minecraft server that is started on boot by Systemd.
-It will also include an optional choice of adding a firewall to the server.
 To play from outside of LAN, this guide will NOT explain how to port forward or set up a VPN.
 
 This guide explains setting up an almost vanilla build of minecraft at the latest versions (1.21.x).
@@ -79,7 +78,7 @@ WorkingDirectory=/home/user/mc-server/
 Restart=always
 StandardOutput=journal
 
-ExecStart=/usr/bin/screen -DmSL mc-server/usr/bin/java -Xmx2G -jar fabric-server-mc.1.21.4-loader.0.16.14-launcher.1.0.3.jar nogui
+ExecStart=/usr/bin/screen -DmSL mc-server /usr/bin/java -Xmx2G -jar fabric-server-mc.1.21.4-loader.0.16.14-launcher.1.0.3.jar nogui
 
 ExecStop=/usr/bin/screen -p 0 -S mc-server -X eval 'stuff "say SERVER SHUTTING DOWN IN 15 SECONDS..."\015'
 ExecStop=/bin/sleep 5

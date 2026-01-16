@@ -4,7 +4,7 @@ title: "My Neovim Workflow 2024"
 date: 2024-08-12T05:22:47+08:00
 author: John Wu
 description: A new and updated version of how I use neovim on a daily basis
-tags: ['tech', 'guides']
+tags: ['tech', 'guides', 'vim']
 draft: false
 toc: true
 
@@ -15,7 +15,7 @@ Last year I wrote [my neovim workflow 2023](/posts/guides/my-neovim-workflow-202
 This article is written for people that have used neovim before, but did not go deep into the configuration part (me).
 Some concepts in neovim are assumed, nix concepts are explained.
 
-# What's different
+# What's Different
 - OS
 - Switched to [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) as the base and not using my own
 

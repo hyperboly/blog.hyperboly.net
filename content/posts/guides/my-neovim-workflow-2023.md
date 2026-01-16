@@ -4,7 +4,7 @@ title: "My Neovim Workflow 2023"
 date: 2023-10-29T21:09:16+08:00
 author: John Wu
 description: "A guide on how I use neovim for programming, writing, and homework"
-tags: ['guides', 'tech']
+tags: ['guides', 'tech', 'vim']
 toc: true
 draft: false
 

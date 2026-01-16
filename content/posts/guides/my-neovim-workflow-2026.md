@@ -113,6 +113,8 @@ return {
 # Add to System Flake
 Since you've already created a public repo on the internet, for me I created one on github, we can easily use the flake as an input.
 ```nix
+# flake.nix
+
 inputs = {
   ...
   nixcats-nvim = {

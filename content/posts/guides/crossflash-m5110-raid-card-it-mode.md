@@ -3,7 +3,6 @@
 title: "Crossflash M5110 Raid Card It Mode"
 date: 2025-04-29T18:01:06+08:00
 author: John Wu
-description:
 tags: ['tech', 'guides']
 description: "A guide on crossflashing the M5110 (LSI 9240-8i) to IT mode"
 toc: true

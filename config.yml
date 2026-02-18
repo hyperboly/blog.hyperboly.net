@@ -37,9 +37,6 @@ menu:
       url: "/posts"
       weight: 1
   feed:
-    - name: "linkedin"
-      url: "https://www.linkedin.com/in/john-wu-1058473a6"
-      weight: 3
     - name: "github"
       url: "https://github.com/hyperboly"
       weight: 2

@@ -1,12 +1,12 @@
 ---
 
 title: "6 Years on Linux"
-date: 2025-08-31T17:50:18+08:00
+date: 2026-02-18T16:59:10+08:00
 author: John Wu
 description:
 tags: ['ramblings', 'tech']
 toc: true
-draft: true
+draft: false
 
 ---
 
@@ -112,16 +112,26 @@ It wasn't until in 2023 Hyprland's first beta versions came out that I really sw
 I switched away because at some point I would have to move to Wayland in the future anyways and it seemed corporate Linux desktops were moving to Wayland.
 Before Hyprland, I experimented with Qtile, AwesomeWM, BSPWM, and i3.
 
+Hyprland back in May of 2023.
+![hyprland configuration in 2023](/images/ramblings/hyprland-desktop2023.webp)
+
 Since 2025, I have since moved on to [niri](https://github.com/YaLTeR/niri), in my opinion a more secure and common sense WM.
 
 # Homelab
 
 Since the old computer I used for the Minecraft server, I purposed my first PC into my server.
+Naturally the more I used Linux the more I thought about selfhosting.
+If I can't program, administrate.
 
 ## Proxmox
 
 While uninstalling Arch, I knew that I still wanted to use the desktop for gaming or school.
 So once Proxmox was installed, my first priority wasn't to create VMs or containers, but to get VFIO working.
+VFIO is Virtual Function IO, meaning passing through host hardware and VM hardware.
+The most common usecase that I know of is GPU passthrough.
+Using the default VirtIO drivers on a virtual machine has a lot of latency because it is CPU bound.
+Passing through a GPU allows the GUI to be GPU bound so that performance is much closer to native.
+The concept is quite simple: the host gives up control of a PCIe device (in this case a GPU) and allows the virtual host to take the full control of the device.
 As you'll see in the post history of this blog, the [first post was about VFIO for my GPU on 2022/06/07.](/posts/guides/gpupassthroughamd6600)
 The RX6600XT GPU and other AMD GPUs have always had this reset bug in Linux that hasn't been fixed at all even in the 9060/9070 versions.
 Overcoming the bug in that kernel version with my experience at the time was kind of a milestone for me.
@@ -131,6 +141,10 @@ Installing DWM again, getting everything set up the way my laptop was set up.
 Over time however, the list of things I self host grew.
 It started with a virtualized TrueNAS, then my own search engine, the blog you're reading, and of course: Minecraft.
 My list of selfhosted services really started to look more "professional" when I started introducing monitoring tools like graylog, uptime-kuma, and zabbix.
+
+The reason I wanted to use Proxmox was to begin moving away from cloud services as much as possible.
+I think I've gotten to 50% selfhosted capacity.
+All of my movies and TV shows are selfhosted, all documents on a NAS and not on cloud, and search/DNS/internet utilities are selfhosted.
 
 ## ZFS
 
@@ -150,9 +164,14 @@ Nowadays, every device I have that's x86 is using ZFS in some capacity.
 
 ## Ansible
 
-Adding ansible into my workflow to manage virtual machines really revolutionalized my home server.
+Since my homelab grew to a level that it was a hassle to individually manage, I started looking into automation.
+One of the biggest reasons is [this video](https://www.youtube.com/watch?v=Z_3DZGqUTH4).
+Basically the part where he can redeploy his entire environment within a couple of click and commands was incredible to me.
+This got me started on using Ansible
+
+Adding Ansible into my workflow to manage virtual machines really revolutionalized my home server.
 Upgrading used to mean I had to ssh individually into my growing number of LXCs and VMs.
-With ansible, 1 command and maybe I'll need to fix something.
+With Ansible, 1 command and maybe I'll need to fix something.
 
 Ansible however, usually will have 1 or 2 problems that need fixing every couple of months when provisioning or updating.
 This is when I made a deep dive into Nix.
